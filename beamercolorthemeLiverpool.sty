@@ -1,5 +1,8 @@
-% Primary colours
+\mode<presentation>
+
+
 \definecolor{Atlantic Blue}{HTML}{031F73}
+\definecolor{PresentationBlue}{RGB}{36,39,87}
 \definecolor{Sunrise Gold}{HTML}{A17700}
 \definecolor{Classic Black}{HTML}{1E1E1E}
 \definecolor{White}{HTML}{000000}
@@ -22,26 +25,59 @@
 \definecolor{Leaf green}{HTML}{00A95C}
 \definecolor{Pepper green}{HTML}{48655B}
 
-
-%%\setbeamercolor*{item}{fg=Lime}
-%\setbeamercolor{palette primary}{fg=white, bg=Atlantic Blue}
-%\setbeamercolor{palette secondary}{fg=white, bg=Sunrise Gold}
-%\setbeamercolor{palette ternary}{fg=white, bg=Classic Black}
+% Settings
+\definecolor{wwgrey}{HTML}{3f4246}
 
 
-% bla
-%\setbeamercolor{structure}{fg=Sunrise Gold}
-%
-%\setbeamercolor{normal text}{%
-%    fg=Classic Black,
-%    bg=white
-%}
-%
-%\setbeamercolor{alerted text}{%
-%  fg=Tangerine
-%  %fg=Sunrise Gold
-%}
-%\setbeamercolor{example text}{%
-%  fg=Leaf green,
-%}
-%
+
+
+
+\colorlet{wwmaincolour}{Atlantic Blue}
+\colorlet{wwsurroundcolour}{PresentationBlue}
+\colorlet{wwcontrastcolor}{white}
+
+
+
+\setbeamercolor*{title}{fg=white}
+\setbeamercolor*{date}{fg=white}
+\setbeamercolor*{page header}{fg=blue}
+\setbeamercolor*{author}{fg=white}
+\setbeamercolor*{institute}{fg=white}
+
+\setbeamercolor*{frametitle}{fg=Classic Black}
+
+
+\setbeamercolor{palette primary}{fg=wwgrey}
+\setbeamercolor{palette secondary}{fg=wwgrey}
+\setbeamercolor{palette tertiary}{fg=wwgrey}
+\setbeamercolor{palette quaternary}{fg=wwgrey}
+\setbeamercolor{normal text}{fg=wwgrey}
+
+
+
+\setbeamercolor{block title example}{use=structure,fg=Classic Black,bg=white}
+\setbeamercolor{block body example}{use=structure,bg=white,fg=wwgrey}
+
+\setbeamercolor{block title definition}{use=structure,fg=Classic Black,bg=white}
+\setbeamercolor{block body definition}{use=structure,bg=white,fg=wwgrey}
+
+
+\setbeamercolor{block title}{use=structure,fg=Classic Black,bg=white}
+\setbeamercolor{block body}{use=structure,bg=white,fg=wwgrey}
+
+
+\setbeamercolor{coloredboxstuff}{fg=wwcontrastcolor,bg=white!10!wwsurroundcolour}
+
+\setbeamercolor{section in head/foot}{bg=wwsurroundcolour!80,fg=wwmaincolour}
+\setbeamercolor{author in head/foot}{bg=wwsurroundcolour,fg=wwcontrastcolor}
+\setbeamercolor{date in head/foot}{bg=wwsurroundcolour!70,fg=wwcontrastcolor}
+\setbeamercolor{title in head/foot}{bg=wwsurroundcolour!90,fg=wwcontrastcolor}
+
+\setbeamertemplate{itemize item}{\scriptsize\raise1.25pt\hbox{\color{wwmaincolour}{$\blacktriangleright$}}}
+\setbeamertemplate{itemize subitem}{\scriptsize\raise1.25pt\hbox{\color{wwmaincolour}{$\blacktriangleright$}}}
+\setbeamertemplate{itemize subsubitem}{\tiny\raise1.5pt\hbox{\color{wwmaincolour}{$\blacktriangleright$}}}
+
+\setbeamerfont{itemize/enumerate subbody}{size=\normalsize}
+
+\mode
+<all>

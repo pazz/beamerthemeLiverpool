@@ -1,0 +1,27 @@
+\mode<presentation>
+
+% Requirement
+\RequirePackage{tikz}
+
+
+\newif\if@doLiverpoolFront
+\@doLiverpoolFronttrue
+
+
+% Settings
+\DeclareOptionBeamer{supressliverpool}{\@doLiverpoolFrontfalse}
+
+\ProcessOptionsBeamer
+
+
+\useinnertheme{tcolorbox}
+\useoutertheme{Liverpool}
+\usecolortheme{Liverpool}
+
+\setbeamertemplate{navigation symbols}{}
+\tcbsetforeverylayer{
+frame style={draw=Classic Black,fill=Classic Black,},
+boxrule=1.5pt
+}
+
+\mode<all>

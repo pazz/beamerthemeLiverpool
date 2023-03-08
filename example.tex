@@ -1,0 +1,115 @@
+\documentclass[aspectratio=169]{beamer}
+
+\usetheme{Liverpool}
+
+\usepackage[export]{adjustbox}
+
+\usepackage{listings} 
+
+
+\usepackage{tikz}
+\usepackage{pgf}
+\usepackage{colortbl}
+
+\usepackage{appendixnumberbeamer}
+
+\begin{document}
+
+
+\newcommand{\makeauthors}{\begin{center}
+\begin{tabular}{>{\centering\arraybackslash}m{3.3cm}>{\centering\arraybackslash}m{3.3cm}>{\centering\arraybackslash}m{3.3cm}}
+
+\livlogowhite{2.7cm}
+&
+\centering\includegraphics[max height=1.5cm, max width = 2.5cm,draft=false]{example-image-b} &
+\livlogowhite{2.7cm} \\
+  Ron Weasley &  Harry Potter &  Hermiony Granger 
+\end{tabular}
+\end{center}}
+
+
+ \title{An Example Presentation}
+\author[Ron Weasley]{\makeauthors}
+\institute[Liverpool]{}
+ 
+\date{\today}
+ 
+
+
+\begin{frame}
+\maketitle
+
+\end{frame}
+
+
+ 
+\begin{frame}
+\frametitle{Muggles}
+We first explore what a Muggle is 
+
+\begin{definition}[Muggle]
+A person without Magic
+
+\end{definition}
+
+
+\begin{example}[Muggle]
+The prime minister
+
+\end{example}
+\end{frame}
+
+ 
+\begin{frame}
+\frametitle{Wizards}
+\begin{definition}[Wizards]
+People with Magic
+\end{definition} 
+
+\pause
+\begin{theorem}
+No Muggle knows about the magical world
+\end{theorem} 
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Algorithm}
+\framesubtitle{For the capture of Magical criminals}
+
+\begin{lstlisting}[mathescape=true]
+Call Aurors
+while not(here):
+  hide
+\end{lstlisting}
+
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Rules of Magical People}
+
+The following rules apply to all witches and wizards:
+\begin{itemize}
+\item Don't eat Muggles
+\item Don't kill Muggles
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Summary}
+
+\begin{block}{Results}
+\begin{itemize}
+  \item There are wizards
+  \item There are Muggels
+  \pause
+  \item Don't get them confused.
+\end{itemize}
+\onslide<1->
+\end{block}
+
+\end{frame}
+ 
+\end{document}
