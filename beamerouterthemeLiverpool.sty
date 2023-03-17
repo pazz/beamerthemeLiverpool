@@ -55,7 +55,7 @@
         % \node[fill] (A) at (\ax-2.5cm+1.3cm,0){};
    
    \ifx\insertframesubtitle\@empty%
-      {\node[anchor=west, font=\Large,draw=Classic Black, line width=1.5pt] at (1,0){\insertframetitle};}
+      {\node[anchor=west, font=\large,draw=Classic Black, line width=1.5pt,font=\bf] at (1,0){\insertframetitle};}
       \else%
       {\node[font=\large,draw=Classic Black, line width=1.5pt, anchor=south west,font=\bf] (Z) at (1,-0.3){\insertframetitle};%
        \node[font=\small,draw=Classic Black, line width=1.5pt, anchor=north west,yshift=1.5pt] at (2,-0.3) {\insertframesubtitle};}%
@@ -64,6 +64,34 @@
   \end{beamercolorbox}
 %\vskip0.3cm%
 }
+
+
+\defbeamertemplate{frametitle}{notitle}{%
+    \begin{beamercolorbox}[wd=\paperwidth,ht=1.5cm]{frametitle} 
+  \begin{tikzpicture}
+  \useasboundingbox[fill=white](0,-0.5) rectangle(\the\paperwidth,\the\paperheight);
+   \node (A) at (\the\paperwidth,\the\paperheight){};
+  \gettikzxy{(A)}{\ax}{\ay}
+
+        \fill [wwsurroundcolour]
+               (0,\the\paperheight) -- 
+              (\the\paperwidth,\the\paperheight) -- 
+              (\the\paperwidth,0.7cm-0\paperwidth) -- 
+              (0,0.7cm-0\paperwidth) --
+              cycle;
+  \end{tikzpicture}
+  \end{beamercolorbox}
+
+}
+
+\BeforeBeginEnvironment{frame}{%
+  \setbeamertemplate{frametitle}[Liverpool]%
+}
+
+\define@key{beamerframe}{notitle}[true]{%
+  \setbeamertemplate{frametitle}[notitle]%
+}
+
 
 \setbeamertemplate{background}{
   \begin{tikzpicture}
@@ -114,7 +142,7 @@
   \end{beamercolorbox}
 %%%%%%%%%%%%%%%%%%%%%
     \begin{beamercolorbox}[sep=8pt,center,#1]{title}
-      \usebeamerfont{title}\inserttitle\par%
+      \usebeamerfont{title}\inserttitle\par% 
     \end{beamercolorbox}%
     % \vskip0.05cm%
     \begin{beamercolorbox}[sep=8pt,center,#1]{author}
