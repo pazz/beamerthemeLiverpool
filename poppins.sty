@@ -1,0 +1,19 @@
+\ProvidesPackage{poppins}
+\RequirePackage{ifpdf}
+\RequirePackage{ifthen}
+
+% For PDF map the TrueType fonts
+\ifpdf
+	\pdfmapfile{+poppins.map}
+\fi
+
+
+\ProcessOptions\relax
+
+% Commands
+
+\newcommand{\fontPoppins}{%
+	\usefont{T1}{poppins}{m}{n}
+}
+
+\endinput
