@@ -1,7 +1,0 @@
-\ProvidesFile{t1poppins.fd}[Poppins Font]
-\DeclareFontFamily{T1}{poppins}{}
-
-\DeclareFontShape{T1}{poppins}{m}{n}{ <-> poppins}{}
-
-
-\endinput
