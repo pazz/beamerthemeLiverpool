@@ -2,26 +2,26 @@
 
 % Requirement
 \RequirePackage{tikz}
-
-
-\newif\if@doLiverpoolFront
-\@doLiverpoolFronttrue
-
+\RequirePackage[skins]{tcolorbox}
+\RequirePackage{etex}
 
 % Settings
-\DeclareOptionBeamer{supressliverpool}{\@doLiverpoolFrontfalse}
+\useinnertheme{circles}
+\useinnertheme{Liverpool}
 
-\ProcessOptionsBeamer
-
-
-\useinnertheme{tcolorbox}
 \useoutertheme{Liverpool}
+
 \usecolortheme{Liverpool}
 
+%\RequirePackage{poppins}
+%\usefonttheme{professionalfonts} % using non standard fonts for beamer
+%\usefonttheme{Liverpool}
+
+%\setbeamertemplate{title page}[default]
+
+
 \setbeamertemplate{navigation symbols}{}
-\tcbsetforeverylayer{
-frame style={draw=Classic Black,fill=Classic Black,},
-boxrule=1.5pt
-}
+%\setbeamertemplate{blocks}[rounded][shadow=true]  
+
 
 \mode<all>

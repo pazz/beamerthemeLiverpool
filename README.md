@@ -3,18 +3,18 @@ UoL LaTeX Beamer template
 
 See [`example.tex`](https://gitlab.csc.liv.ac.uk/staff/templates/latex-beamer-theme-uol/-/blob/master/example.tex) and [`example.pdf`](https://gitlab.csc.liv.ac.uk/staff/templates/latex-beamer-theme-uol/-/blob/master/example.pdf).
 
-Usage:
+## Usage:
 * `\usetheme{Liverpool}`
-* Use `\livlogo{size}` or `\livlogowhite{size}` to include the liverpool logo.
 
-Options: `\usetheme[options]{Liverpool}`
-* Use `supressliverpool` to exlcude the Liverpool logo from the title page
+## Based on:
 
-Based on:
-* [University presentation hub](https://www.liverpool.ac.uk/intranet/brand-identity/brand-toolkit/presentation-hub/)
-* [University corporate colours](https://www.liverpool.ac.uk/intranet/brand-identity/brand-toolkit/corporate-colours/) 
-* [Warwick-LaTeX-Beamer-Theme](https://github.com/davidjpurser/Warwick-LaTeX-Beamer-Theme)
+- [UoL Powerpoint template](https://www.liverpool.ac.uk/intranet/brand/powerpoint-template/)
 
 See also [Brand Identity](https://www.liverpool.ac.uk/intranet/brand-identity/)
 
-Contributions are welcome!
+##TODO
+
+Contributions are welcome! Here are some pointers:
+
+[ ] use updated colours? <https://www.liverpool.ac.uk/intranet/brand/brand-guidelines/colours/colour-palette/>
+[ ] add simple switch to change color scheme (fg to white, bg to one of the flashy colours). `\usepackage{colourchange}`?
