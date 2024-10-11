@@ -56,19 +56,24 @@
 
 
 % Titles,subtitles of frames
-\setbeamercolor*{titlelike}{fg=Black}
+\setbeamercolor*{titlelike}{use=normal text}
 \setbeamercolor*{structure}{fg=Sky Blue}
 
 
-\setbeamercolor{palette primary}{fg=Blue}
-\setbeamercolor{palette secondary}{fg=Blue}
+%\setbeamercolor{palette primary}{fg=Blue}
+%\setbeamercolor{palette secondary}{fg=Blue}
 %\setbeamercolor{palette tertiary}{fg=Rose}
 %\setbeamercolor{palette quaternary}{fg=Deep plum}
  % \setbeamercolor{normal text}{fg=wwgrey}
 
-\setbeamercolor{block title}{fg=Black}
 
+\setbeamercolor*{block title}{use=normal text}
 
+% alerted text and title of alertblock
+\setbeamercolor*{alerted text}{fg=Pink}
+
+% This prevents the qed box from using structure's colour
+\setbeamercolor*{qed symbol}{use=normal text}
 
 % \setbeamercolor{block title example}{use=structure,fg=Classic Black,bg=white}
 % \setbeamercolor{block body example}{use=structure,bg=white,fg=wwgrey}

@@ -23,12 +23,13 @@
 \maketitle
 \end{frame}
 
-
+%\setbeamercolor{normal text}{fg=red}
+%\usebeamercolor{normal text}
 \begin{frame}[t]
     \frametitle{Slide Title}
     \framesubtitle{Second Line}
 
-    Content
+    Content (bug: how is this not ``normal text''?
     \begin{itemize}
         \item Bullet point
     \end{itemize}
@@ -39,43 +40,63 @@
 % \setbeamercolor{structure}{fg=White}
  
 \begin{frame}
-\frametitle{Muggles}
-We first explore what a Muggle is 
+\frametitle{Blocks}
+\framesubtitle{Maths environments}
 
 \begin{definition}[Muggle]
 A person without Magic
 \end{definition}
 
+\begin{lemma}
+    This is a Lemma
+\end{lemma}
 \begin{theorem}
 No Muggle knows about the magical world
 \end{theorem} 
+\begin{proof}
+    by simple induction.
+\end{proof}
 
+
+\end{frame}
+\begin{frame}
+\frametitle{Blocks}
+\framesubtitle{More of them}
+
+There is some \alert{alerted} and some \emph{emphasized} text here.
+
+\begin{alertblock}{Alerted Block}
+    \lipsum[1][1-2] 
+\end{alertblock}
 \begin{example}[Muggle]
 The prime minister
 \end{example}
 
 \end{frame}
-
 %\setbeamercolor{normal text}{bg=Tangerine,fg=White}
 % \setbeamercolor{normal text}{bg=Indigo,fg=White}
 % \setbeamercolor{structure}{fg=White}
 
+\uolcolours{Orange}{White}
 \begin{frame}[t]
 
     \vspace{2cm}
-    {\LARGE\uolbrick{HELLO}}
+    \uolbrick[font=\LARGE\bfseries]{HELLO}
     \begin{block}{Here is some text in a block}
         \lipsum[1][1-5]
     \end{block}
     
 \end{frame}
 
-
+\uolcolours{Pink}{White}
+\setbeamercolor{normal text}{bg=Teal Green,fg=Teal Green}
 \begin{frame}
 \frametitle{Rules}
 \framesubtitle{Rules of Magical People}
 
+
 The following rules apply to all witches and wizards:
+
 \begin{itemize}
 \item Don't eat Muggles
 \item Don't kill Muggles
@@ -118,8 +139,8 @@ The following rules apply to all witches and wizards:
 
 
 \begin{frame}[t]
-    \frametitle{AVAILABLE}
-    \framesubtitle{COLORS (OLD PALETTE}
+    \frametitle{AVAILABLE COLOURS}
+    \framesubtitle{OLD PALETTE}
 
     \begin{columns}
         \begin{column}{0.3\textwidth}

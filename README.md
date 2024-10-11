@@ -19,6 +19,8 @@ are welcome! Here are some pointers.
 
 - [ ] finetune structure colours and spacing
 - [ ] add simple switch to change color scheme (fg to white, bg to one of the flashy colours).
+- [ ] make flashy title page optional
+<https://tex.stackexchange.com/questions/8043/change-the-background-color-of-a-frame-in-beamer>
 
 ## Helpful resources
 

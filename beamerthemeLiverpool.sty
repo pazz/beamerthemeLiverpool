@@ -6,12 +6,13 @@
 \RequirePackage{etex}
 
 % Settings
+\usecolortheme{Liverpool}
+
 \useinnertheme{circles}
 \useinnertheme{Liverpool}
 
 \useoutertheme{Liverpool}
 
-\usecolortheme{Liverpool}
 
 %\RequirePackage{poppins}
 %\usefonttheme{professionalfonts} % using non standard fonts for beamer
@@ -23,5 +24,20 @@
 \setbeamertemplate{navigation symbols}{}
 %\setbeamertemplate{blocks}[rounded][shadow=true]  
 
+\NewDocumentCommand{\uolcolours}{m m}{
+\setbeamercolor*{normal text}{bg=#1,fg=#2}
+\setbeamercolor*{structure}{fg=#2}
+
+\setbeamercolor*{titlelike}{fg=#2}
+\setbeamercolor*{structure}{fg=#2}
+
+\setbeamercolor*{block title}{fg=#2}
+\setbeamercolor*{block body}{fg=#2}
+
+% alerted text and title of alertblock
+\setbeamercolor*{alerted text}{fg=Pink}
+
+
+}
 
 \mode<all>
