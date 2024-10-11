@@ -1,25 +1,4 @@
 \mode<presentation>
-
-\setbeamertemplate{background}{
-  \ifnum\thepage=1\relax%
-  \begin{tikzpicture}
-  %TITLE PAGE
-  \useasboundingbox (0,0) rectangle(\the\paperwidth,\the\paperheight);
-  \fill[color=Presentation Blue] (0,0) rectangle (\the\paperwidth,\the\paperheight);
-  \path[fill overzoom image=UoL-vg.jpg] (\the\paperwidth*0.66,0) rectangle(\the\paperwidth,\the\paperheight);
-  \end{tikzpicture}
-   \fi
-
-  % AFTER TITLE PAGE
-   %\fill[white,opacity=1] (0,0) rectangle(\the\paperwidth,\the\paperheight);
-}
-
-
-%\addtobeamertemplate{date}{\vskip1cm}{}
-
-
-% Title page
-
 % draw two bricks
 %
 % \uolbrick[pos1][pos2][style1][style2]{content1}{content2} % where
@@ -45,15 +24,29 @@
   \end{tikzpicture}
 }
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% BACKGROUND CANVAS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setbeamertemplate{background}{
+  % only change first slide, rest defaults to single colour (normal text.bg)
+  \ifnum\thepage=1\relax%
+  \begin{tikzpicture}
+  \useasboundingbox (0,0) rectangle(\the\paperwidth,\the\paperheight);
+  \fill[color=title.bg] (0,0) rectangle (\the\paperwidth,\the\paperheight);
+  \path[fill overzoom image=UoL-vg.jpg] (\the\paperwidth*0.66,0) rectangle(\the\paperwidth,\the\paperheight);
+  \end{tikzpicture}
+   \fi
+}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % TITLE PAGE
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 % TITLE PAGE COLORS
-\setbeamercolor*{title}{fg=white}
-\setbeamercolor*{date}{fg=white}
-\setbeamercolor*{author}{fg=white}
-\setbeamercolor*{institute}{fg=white}
+\setbeamercolor*{title}{bg=Blue,fg=White}
+\setbeamercolor*{date}{parent=title,bg=}
+\setbeamercolor*{author}{parent=title,bg=}
+\setbeamercolor*{institute}{parent=title,bg=}
+
 
 % TITLE PAGE LAYOUT
 \defbeamertemplate*{title page}{Liverpool}[1][]{%
@@ -95,7 +88,6 @@
    \end{beamercolorbox}
 }
 
-
 \defbeamertemplate*{frametitle}{Liverpool}[1][]
 {
 \vskip0.5cm%
@@ -106,6 +98,5 @@
    \fi
 \vskip0.3cm%
 }
-
 
 \mode<all>

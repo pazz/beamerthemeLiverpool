@@ -13,22 +13,18 @@
 
 \useoutertheme{Liverpool}
 
-
+% Maybe later?
 %\RequirePackage{poppins}
 %\usefonttheme{professionalfonts} % using non standard fonts for beamer
 %\usefonttheme{Liverpool}
-
-%\setbeamertemplate{title page}[default]
 
 
 \setbeamertemplate{navigation symbols}{}
 %\setbeamertemplate{blocks}[rounded][shadow=true]  
 
-\NewDocumentCommand{\uolcolours}{m m}{
-\setbeamercolor*{normal text}{bg=#1,fg=#2}
-\setbeamercolor*{structure}{fg=#2}
 
-\setbeamercolor*{titlelike}{fg=#2}
+% Macro for quickly overloading colours
+\NewDocumentCommand{\uolcolours}{m m}{
 \setbeamercolor*{structure}{fg=#2}
 
 \setbeamercolor*{block title}{fg=#2}
@@ -37,7 +33,9 @@
 % alerted text and title of alertblock
 \setbeamercolor*{alerted text}{fg=Pink}
 
-
+\setbeamercolor{normal text}{bg=#1,fg=#2}
+\usebeamercolor[fg]{normal text}
 }
+
 
 \mode<all>

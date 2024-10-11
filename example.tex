@@ -16,29 +16,54 @@
 %\institute{Liverpool}
 
 
-
 \begin{document}
-
+\usebeamercolor[fg]{normal text}
+% Title page can coloured differently...
+%\setbeamercolor*{title}{bg=Pink, fg=White}
 \begin{frame}
 \maketitle
 \end{frame}
 
-%\setbeamercolor{normal text}{fg=red}
-%\usebeamercolor{normal text}
 \begin{frame}[t]
     \frametitle{Slide Title}
     \framesubtitle{Second Line}
 
-    Content (bug: how is this not ``normal text''?
-    \begin{itemize}
-        \item Bullet point
-    \end{itemize}
+    Content.
+    \lipsum[1][1-2]
+
+    \begin{columns}[T]
+        \begin{column}{0.5\textwidth}
+            \begin{itemize}
+                \item \lipsum[1][2]
+                \item \lipsum[2][2]
+                \item \lipsum[3][2]
+            \end{itemize}
+        \end{column}
+
+        \begin{column}{0.5\textwidth}
+            \begin{enumerate}
+                \item \lipsum[3][1]
+                \item \lipsum[4][2]
+                \item \lipsum[5][2]
+            \end{enumerate}
+        \end{column}
+    \end{columns}
 \end{frame}
 
+\begin{frame}
+\frametitle{Blocks}
+There is some \alert{alerted} and some \emph{emphasized} text here. This is surprisingly far from the title?
+\begin{block}{Titled Block}
+    \lipsum[1][1-2] 
+\end{block}
+\begin{alertblock}{Alerted Block}
+    \lipsum[1][1-2] 
+\end{alertblock}
+\begin{example}[Muggle]
+%The prime minister
+\end{example}
 
-%\setbeamercolor{normal text}{bg=Indigo,fg=White}
-% \setbeamercolor{structure}{fg=White}
- 
+\end{frame}
 \begin{frame}
 \frametitle{Blocks}
 \framesubtitle{Maths environments}
@@ -57,46 +82,41 @@ No Muggle knows about the magical world
     by simple induction.
 \end{proof}
 
-
 \end{frame}
-\begin{frame}
-\frametitle{Blocks}
-\framesubtitle{More of them}
 
-There is some \alert{alerted} and some \emph{emphasized} text here.
-
-\begin{alertblock}{Alerted Block}
-    \lipsum[1][1-2] 
-\end{alertblock}
-\begin{example}[Muggle]
-The prime minister
-\end{example}
-
-\end{frame}
-%\setbeamercolor{normal text}{bg=Tangerine,fg=White}
-% \setbeamercolor{normal text}{bg=Indigo,fg=White}
-% \setbeamercolor{structure}{fg=White}
-
+%%%%%%%%%%%%
+% COLOURS
+% 
+% You can redefine backgrounds for individual frames by adjusting "normal text" as follows.
+% \setbeamercolor{normal text}{bg=Tangerine,fg=White}
+%
+% the command \uolcolours does this and additionally sets structure element to the same foreground for consistency.
 \uolcolours{Orange}{White}
 \begin{frame}[t]
-
     \vspace{2cm}
     \uolbrick[font=\LARGE\bfseries]{HELLO}
     \begin{block}{Here is some text in a block}
-        \lipsum[1][1-5]
+      \lipsum[1][1-5]
     \end{block}
-    
+\end{frame}
+
+\uolcolours{Teal Green}{White}
+\begin{frame}[t]
+    \vspace{2cm}
+    \uolbrick[font=\LARGE\bfseries]{THERE}
+    \begin{block}{Here is some more text in a block}
+        \lipsum[1][1-5]\footnote{This is a slide without tile/subtitle but with a custom UOL brick and a titled block.}
+    \end{block}
 \end{frame}
 
 \uolcolours{Pink}{White}
-\setbeamercolor{normal text}{bg=Teal Green,fg=Teal Green}
+%\setbeamercolor{normal text}{bg=Teal Green,fg=Teal Green}
 \begin{frame}
 \frametitle{Rules}
 \framesubtitle{Rules of Magical People}
 
 
 The following rules apply to all witches and wizards:
-
 \begin{itemize}
 \item Don't eat Muggles
 \item Don't kill Muggles
@@ -105,6 +125,7 @@ The following rules apply to all witches and wizards:
 \end{frame}
 
 
+% This is just to simplyfy the next slides
 \newcommand{\printcolour}[1]{
     {\colorbox{#1}{\mbox{\strut}}\textcolor{#1}{#1}\\}
 }

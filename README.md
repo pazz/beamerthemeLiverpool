@@ -18,7 +18,7 @@ are welcome! Here are some pointers.
 ## TODO
 
 - [ ] finetune structure colours and spacing
-- [ ] add simple switch to change color scheme (fg to white, bg to one of the flashy colours).
+- [X] add simple switch to change color scheme (now via `\uolcolours{bg}{fg}`
 - [ ] make flashy title page optional
 <https://tex.stackexchange.com/questions/8043/change-the-background-color-of-a-frame-in-beamer>
 
