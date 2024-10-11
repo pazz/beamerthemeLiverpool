@@ -1,24 +1,24 @@
 UoL LaTeX Beamer template
 ------------------------------------
 
-See [`example.tex`](https://gitlab.csc.liv.ac.uk/staff/templates/latex-beamer-theme-uol/-/blob/master/example.tex) and [`example.pdf`](https://gitlab.csc.liv.ac.uk/staff/templates/latex-beamer-theme-uol/-/blob/master/example.pdf).
+See [`example.tex`](example.tex) and [`example.pdf`](example.pdf).
 
-## Usage:
+# Usage:
 * `\usetheme{Liverpool}`
 
-## Based on:
+# Based on:
 
 - [UoL Powerpoint template](https://www.liverpool.ac.uk/intranet/brand/powerpoint-template/)
 
 
-#Contributions!
+# Contributions!
 
 are welcome! Here are some pointers.
 
-##TODO
+## TODO
 
-[ ] use updated colours? <https://www.liverpool.ac.uk/intranet/brand/brand-guidelines/colours/colour-palette/>
-[ ] add simple switch to change color scheme (fg to white, bg to one of the flashy colours).
+- [ ] use updated colours? <https://www.liverpool.ac.uk/intranet/brand/brand-guidelines/colours/colour-palette/>
+- [ ] add simple switch to change color scheme (fg to white, bg to one of the flashy colours).
 
 ## Helpful resources
 
