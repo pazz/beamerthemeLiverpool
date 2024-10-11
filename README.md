@@ -10,11 +10,18 @@ See [`example.tex`](https://gitlab.csc.liv.ac.uk/staff/templates/latex-beamer-th
 
 - [UoL Powerpoint template](https://www.liverpool.ac.uk/intranet/brand/powerpoint-template/)
 
-See also [Brand Identity](https://www.liverpool.ac.uk/intranet/brand-identity/)
+
+#Contributions!
+
+are welcome! Here are some pointers.
 
 ##TODO
 
-Contributions are welcome! Here are some pointers:
-
 [ ] use updated colours? <https://www.liverpool.ac.uk/intranet/brand/brand-guidelines/colours/colour-palette/>
-[ ] add simple switch to change color scheme (fg to white, bg to one of the flashy colours). `\usepackage{colourchange}`?
+[ ] add simple switch to change color scheme (fg to white, bg to one of the flashy colours).
+
+## Helpful resources
+
+- [UoL Brand Identity](https://www.liverpool.ac.uk/intranet/brand-identity/)
+- <https://latex-beamer.com/tutorials/text-formatting/>
+- <https://www.beamer.plus/Changing-Way-Things-Look.html>
