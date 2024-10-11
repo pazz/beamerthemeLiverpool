@@ -17,7 +17,7 @@ are welcome! Here are some pointers.
 
 ## TODO
 
-- [ ] use updated colours? <https://www.liverpool.ac.uk/intranet/brand/brand-guidelines/colours/colour-palette/>
+- [ ] finetune structure colours and spacing
 - [ ] add simple switch to change color scheme (fg to white, bg to one of the flashy colours).
 
 ## Helpful resources
