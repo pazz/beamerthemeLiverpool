@@ -19,8 +19,7 @@ are welcome! Here are some pointers.
 
 - [ ] finetune structure colours and spacing
 - [X] add simple switch to change color scheme (now via `\uolcolours{bg}{fg}`
-- [ ] make flashy title page optional
-<https://tex.stackexchange.com/questions/8043/change-the-background-color-of-a-frame-in-beamer>
+- [X] make flashy title page optional (see inline doc in `example.tex`)
 
 ## Helpful resources
 
