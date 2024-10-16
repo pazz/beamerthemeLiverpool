@@ -49,11 +49,12 @@
 \defbeamertemplate*{background}{image right}[1][UoL-vg.jpg]{
   % only change first slide, rest defaults to single colour (normal text.bg)
   \ifnum\thepage=1\relax%
-  \begin{tikzpicture}
-  \useasboundingbox (0,0) rectangle(\the\paperwidth,\the\paperheight);
-  \fill[color=title.bg] (0,0) rectangle (\the\paperwidth,\the\paperheight);
-  \path[fill overzoom image=#1] (\the\paperwidth*0.66,0) rectangle(\the\paperwidth,\the\paperheight);
-  \end{tikzpicture}
+   \begin{tikzpicture}
+   \useasboundingbox (0,0) rectangle(\the\paperwidth,\the\paperheight);
+   \fill[color=title.bg] (0,0) rectangle (\the\paperwidth,\the\paperheight);
+   \node[inner sep=0pt,anchor=north east] at (\the\paperwidth,\the\paperheight) {\includegraphics[height=\the\paperheight]{#1}};
+   %\path[fill overzoom image=#1] (\the\paperwidth*0.66,0) rectangle(\the\paperwidth,\the\paperheight);
+   \end{tikzpicture}
   \fi
 }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
