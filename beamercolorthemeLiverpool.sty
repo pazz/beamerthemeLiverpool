@@ -76,4 +76,121 @@
 \setbeamercolor*{qed symbol}{use=normal text}
 
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% COLOUR COMPBINATIONS
+%
+% https://www.liverpool.ac.uk/intranet/brand/brand-guidelines/colours/colour-combinations-and-accessibility/
+
+% give them names and associate commands
+\pgfkeys{/uol/color/style/.cd,
+.is choice,
+Skye Blue/.code=\uol@color@style@skyblue,
+Teal Green/.code=\uol@color@style@teal,
+Orange/.code={\uol@color@style@orange},
+Grey/.code={\uol@color@style@grey},
+Pink/.code={\uol@color@style@pink},
+Burgundy/.code={\uol@color@style@burgundy},
+Dark Green/.code=\uol@color@style@darkgreen,
+Blue/.code=\uol@color@style@blue,
+default/.code={\uol@color@style@default},
+}
+
+% Define actual colour combinations
+\newcommand{\uol@color@style@teal}{
+\setbeamercolor*{structure}{fg=Yellow}
+\setbeamercolor*{titlelike}{fg=White}
+\setbeamercolor*{block title}{fg=White}
+\setbeamercolor*{block body}{fg=White}
+\setbeamercolor*{alerted text}{fg=Pink}
+\setbeamercolor*{example text}{fg=Dark Green}
+\setbeamercolor*{normal text}{bg=Teal Green,fg=White}
+\usebeamercolor[fg]{normal text}
+}
+\newcommand{\uol@color@style@skyblue}{
+\setbeamercolor*{structure}{fg=Yellow}
+\setbeamercolor*{titlelike}{fg=White}
+\setbeamercolor*{block title}{fg=White}
+\setbeamercolor*{block body}{fg=White}
+\setbeamercolor*{alerted text}{fg=Pink}
+\setbeamercolor*{example text}{fg=Teal Green}
+\setbeamercolor*{normal text}{bg=Sky Blue,fg=White}
+\usebeamercolor[fg]{normal text}
+}
+\newcommand{\uol@color@style@orange}{
+\setbeamercolor*{structure}{fg=Yellow}
+\setbeamercolor*{titlelike}{fg=White}
+\setbeamercolor*{block title}{fg=White}
+\setbeamercolor*{block body}{fg=White}
+\setbeamercolor*{alerted text}{fg=Pink}
+\setbeamercolor*{example text}{fg=Teal Green}
+\setbeamercolor*{normal text}{bg=Orange,fg=White}
+\usebeamercolor[fg]{normal text}
+}
+\newcommand{\uol@color@style@grey}{
+\setbeamercolor*{structure}{fg=White}
+\setbeamercolor*{titlelike}{fg=White}
+\setbeamercolor*{block title}{fg=White}
+\setbeamercolor*{block body}{fg=White}
+\setbeamercolor*{alerted text}{fg=Pink}
+\setbeamercolor*{example text}{fg=Teal Green}
+\setbeamercolor*{normal text}{bg=Grey,fg=White}
+\usebeamercolor[fg]{normal text}
+}
+\newcommand{\uol@color@style@pink}{
+\setbeamercolor*{structure}{fg=White}
+\setbeamercolor*{titlelike}{fg=White}
+\setbeamercolor*{block title}{fg=White}
+\setbeamercolor*{block body}{fg=White}
+\setbeamercolor*{alerted text}{fg=Sky Blue}
+\setbeamercolor*{example text}{fg=Teal Green}
+\setbeamercolor*{normal text}{bg=Pink,fg=White}
+\usebeamercolor[fg]{normal text}
+}
+
+\newcommand{\uol@color@style@darkgreen}{
+\setbeamercolor*{structure}{fg=Yellow}
+\setbeamercolor*{titlelike}{fg=White}
+\setbeamercolor*{block title}{fg=White}
+\setbeamercolor*{block body}{fg=White}
+\setbeamercolor*{alerted text}{fg=Yellow}
+\setbeamercolor*{example text}{fg=Orange}
+\setbeamercolor*{normal text}{bg=Dark Green,fg=White}
+\usebeamercolor[fg]{normal text}
+}
+\newcommand{\uol@color@style@burgundy}{
+\setbeamercolor*{structure}{fg=White}
+\setbeamercolor*{titlelike}{fg=White}
+\setbeamercolor*{block title}{fg=White}
+\setbeamercolor*{block body}{fg=White}
+\setbeamercolor*{alerted text}{fg=Pink}
+\setbeamercolor*{example text}{fg=Teal Green}
+\setbeamercolor*{normal text}{bg=Burgundy,fg=White}
+\usebeamercolor[fg]{normal text}
+}
+\newcommand{\uol@color@style@blue}{
+\setbeamercolor*{structure}{fg=White}
+\setbeamercolor*{titlelike}{fg=White}
+\setbeamercolor*{block title}{fg=White}
+\setbeamercolor*{block body}{fg=White}
+\setbeamercolor*{alerted text}{fg=Pink}
+\setbeamercolor*{example text}{fg=Teal Green}
+\setbeamercolor*{normal text}{bg=Blue,fg=White}
+\usebeamercolor[fg]{normal text}
+}
+\newcommand{\uol@color@style@default}{
+\setbeamercolor*{structure}{fg=Black}
+\setbeamercolor*{titlelike}{fg=Black}
+\setbeamercolor*{block title}{fg=Black}
+\setbeamercolor*{block body}{fg=Black}
+\setbeamercolor*{alerted text}{fg=Pink}
+\setbeamercolor*{example text}{fg=Dark Green}
+\setbeamercolor*{normal text}{bg=White,fg=Black}
+\usebeamercolor[fg]{normal text}
+}
+
+% This does not work yet
+% \define@key{beamerframe}{style}[1][default]{%
+% \pgfkeys{/uol/color/style={#1}}
+% }
 \mode<all>
