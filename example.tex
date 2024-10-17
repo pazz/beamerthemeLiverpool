@@ -27,19 +27,11 @@
 % default background and titling can be recovered by setting
 % \setbeamertemplate{background}[default]
 % \setbeamertemplate{title page}[default]
-\begin{frame}
+\begin{frame}[colourprofile=Teal Green]
 \maketitle
 \end{frame}
-% \pgfkeys{/uol/color/style=Teal Green}
-% \pgfkeys{/uol/color/style=Skye Blue}
-% \pgfkeys{/uol/color/style=Orange}
-% \pgfkeys{/uol/color/style=Grey}
-% \pgfkeys{/uol/color/style=Pink}
-% \pgfkeys{/uol/color/style=Burgundy}
-%\pgfkeys{/uol/color/style=Dark Green}
-%\pgfkeys{/uol/color/style=Burgundy}
 
-\begin{frame}[t,style={Dark Green}]
+\begin{frame}[t]
     \frametitle{Slide Title}
     \framesubtitle{Second Line}
 
@@ -209,5 +201,44 @@ The following rules apply to all witches and wizards:
     \end{columns}
 \end{frame}
 
- 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+% COLOUR PROFILES
+% can be enabled by passing the colourprofile argument to a frame environment.
+% e.g. \begin{frame}[t,colourprofile={Dark Green}]
+%
+% The available keys are
+% Teal Green
+% Skye Blue
+% Orange
+% Grey
+% Pink
+% Burgundy
+% Dark Green
+% Burgundy
+
+\begin{frame}[t,colourprofile={Dark Green}]
+    \frametitle{COLOUR PROFILES}
+    \framesubtitle{DARK GREEN}
+
+    Content.
+    \lipsum[1][1-2]
+
+    \begin{columns}[T]
+        \begin{column}{0.5\textwidth}
+            \begin{itemize}
+                \item \lipsum[1][2]
+                \item \lipsum[2][2]
+                \item \lipsum[3][2]
+            \end{itemize}
+        \end{column}
+
+        \begin{column}{0.5\textwidth}
+            \begin{enumerate}
+                \item \lipsum[3][1]
+                \item \lipsum[4][2]
+                \item \lipsum[5][2]
+            \end{enumerate}
+        \end{column}
+    \end{columns}
+\end{frame}
 \end{document}

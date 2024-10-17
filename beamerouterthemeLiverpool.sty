@@ -89,6 +89,7 @@
    \end{beamercolorbox}
 }
 
+% FRAME TITLE
 \defbeamertemplate*{frametitle}{Liverpool}[1][]
 {
 \vskip0.5cm%
@@ -101,5 +102,27 @@
    \fi
 \vskip0.3cm%
 }
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% COLOUR PROFILES
+%
+% The implementation follows
+% https://tex.stackexchange.com/questions/257300/passing-arguments-to-custom-frame-option
+% 
+% TODO: do not reset to defaults unless parameter was used?
+% That way one could set the colours once per pgfkeys and it's valid for multiple frames.
+% metropolis/moloch do this.
+
+% reset the colour profile back to defaults when starting a new frame
+\BeforeBeginEnvironment{frame}{%
+    \pgfkeys{/uol/color/style=default}
+}
+% define colourprofile argument and use it to set the profile
+\makeatletter
+\define@key{beamerframe}{colourprofile}[true]{%
+    \pgfkeys{/uol/color/style={#1}}
+}
+\makeatother
+
 
 \mode<all>
