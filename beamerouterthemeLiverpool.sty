@@ -93,8 +93,10 @@
 {
 \vskip0.5cm%
    \ifx\insertframesubtitle\@empty%
+      \usebeamercolor[fg]{frametitle}
       \uolbrick[font=\bf]{\insertframetitle}
    \else%
+       \usebeamercolor[fg]{framesubtitle}
        \uolbricks[font=\bf]{\insertframetitle}{\insertframesubtitle}
    \fi
 \vskip0.3cm%
