@@ -17,7 +17,7 @@
 
 
 \begin{document}
-\usebeamercolor[fg]{normal text}
+%\usebeamercolor[fg]{normal text}
 % Title page can coloured differently by setting
 %\setbeamercolor*{title}{bg=Pink, fg=White}
 %
@@ -27,7 +27,7 @@
 % default background and titling can be recovered by setting
 % \setbeamertemplate{background}[default]
 % \setbeamertemplate{title page}[default]
-\begin{frame}[colourprofile=Teal Green]
+\begin{frame}[uolcolours=Teal Green]
 \maketitle
 \end{frame}
 
@@ -57,6 +57,7 @@
     \end{columns}
 \end{frame}
 
+\section{Blocks}
 \begin{frame}
 \frametitle{Blocks}
 There is some \alert{alerted} and some \emph{emphasized} text here. This is surprisingly far from the title?
@@ -73,6 +74,7 @@ There is some \alert{alerted} and some \emph{emphasized} text here. This is surp
 \end{frame}
 
 
+\section{Blocks}
 
 \begin{frame}
 \frametitle{Blocks}
@@ -94,14 +96,114 @@ No Muggle knows about the magical world
 
 \end{frame}
 
+
 %%%%%%%%%%%%
 % COLOURS
 % 
-% You can redefine backgrounds for individual frames by adjusting "normal text" as follows.
-% \setbeamercolor{normal text}{bg=Tangerine,fg=White}
-%
-% the command \uolcolours does this and additionally sets structure element to the same foreground for consistency.
-\uolcolours{Orange}{White}
+\section{Colours}
+
+% This is just to simplyfy the next slides
+\newcommand{\printcolour}[1]{{\colorbox{#1}{\mbox{\strut}}\textcolor{#1}{#1}}}
+\newcommand{\printcolourbox}[2]{{\colorbox{#1}{\textcolor{#2}{#1}}}}
+
+\begin{frame}[t,fragile]
+    \frametitle{COLORS}
+    \framesubtitle{Available colours}
+
+    The following UOL branded colours are available
+    for use e.g.\ via \verb|\textcolor{..}|.
+
+    \medskip
+    \begin{columns}[onlytextwidth]
+        \begin{column}{0.25\textwidth}
+\printcolour{Charcoal}
+\printcolour{Grey}
+\printcolour{Stone}
+        \end{column}
+        \begin{column}{0.25\textwidth}
+\printcolour{Dark Green}
+\printcolour{Teal Green}
+\printcolour{Burgundy}
+        \end{column}
+        \begin{column}{0.25\textwidth}
+\printcolour{Pink}
+\printcolour{Orange}
+\printcolour{Yellow}
+        \end{column}
+        \begin{column}{0.25\textwidth}
+\printcolour{Green}
+\printcolour{Sky Blue}
+\printcolour{Blue}
+        \end{column}
+    \end{columns}
+\end{frame}
+    \begin{frame}[t,fragile]
+    \frametitle{COLORS}
+    \framesubtitle{Profiles}
+
+    This theme also defines some colour profiles that you can use for standout frames.
+    They set several colour elements to sensible color combinations.
+
+    \begin{block}{Defined Profiles}
+        \printcolourbox{Sky Blue}{White}
+        \printcolourbox{Teal Green}{White}
+        \printcolourbox{Orange}{White}
+        \printcolourbox{Grey}{White}
+        \printcolourbox{Pink}{White}
+        \printcolourbox{Burgundy}{White}
+        \printcolourbox{Dark Green}{White}
+        \printcolourbox{Blue}{White}
+        %\colorbox{White}{\textcolor{Black}{default}}
+    \end{block}
+
+
+    \begin{block}{How to use them}
+ You can switch to some predefined colour profiles mid presentation in two ways:
+ \begin{enumerate}
+     \item use \verb|\uolcolours{PRESET}| to cause subsequent frames to use the colours from PRESET;
+     \item 
+         Give a parameter "uolcolours" directly to a frame environment to affect only that one frame:
+         \verb|\begin{frame}[uolcolours=PRESET] ... \end{frame}|
+ \end{enumerate}
+    \end{block}
+\end{frame}
+
+
+% \begin{frame}[t]
+%     \frametitle{AVAILABLE COLOURS}
+%     \framesubtitle{OLD PALETTE}
+
+%     \begin{columns}
+%         \begin{column}{0.3\textwidth}
+% \printcolour{Atlantic Blue}
+% \printcolour{Presentation Blue}
+% \printcolour{Sunrise Gold}
+% \printcolour{Classic Black}
+% \printcolour{White}
+% \printcolour{Deep plum}
+% \printcolour{Violet}
+%         \end{column}
+%         \begin{column}{0.3\textwidth}
+% \printcolour{Indigo}
+% \printcolour{Cyan}
+% \printcolour{Regal blue}
+% \printcolour{Turquoise}
+% \printcolour{Rasberry}
+% \printcolour{Rose}
+% \printcolour{Berry}
+%         \end{column}
+%         \begin{column}{0.3\textwidth}
+% \printcolour{Tangerine}
+% \printcolour{Pumpkin}
+% \printcolour{Lemon}
+% \printcolour{Lime}
+% \printcolour{Leaf green}
+% \printcolour{Pepper green}
+%         \end{column}
+%     \end{columns}
+% \end{frame}
+
+\uolcolours{Teal Green}
 \begin{frame}
     \uolbrick[font=\LARGE\bfseries]{HELLO}
     \begin{block}{Here is some text in a block}
@@ -109,16 +211,13 @@ No Muggle knows about the magical world
     \end{block}
 \end{frame}
 
-\uolcolours{Teal Green}{White}
-\begin{frame}
+\begin{frame}[uolcolours=Orange]
     \uolbrick[font=\LARGE\bfseries]{THERE}
     \begin{block}{Here is some more text in a block}
         \lipsum[1][1-5]\footnote{This is a slide without tile/subtitle but with a custom UOL brick and a titled block.}
     \end{block}
 \end{frame}
 
-\uolcolours{Pink}{White}
-%\setbeamercolor{normal text}{bg=Teal Green,fg=Teal Green}
 \begin{frame}
 \frametitle{Rules}
 \framesubtitle{Rules of Magical People}
@@ -133,78 +232,11 @@ The following rules apply to all witches and wizards:
 \end{frame}
 
 
-% This is just to simplyfy the next slides
-\newcommand{\printcolour}[1]{
-    {\colorbox{#1}{\mbox{\strut}}\textcolor{#1}{#1}\\}
-}
-\setbeamercolor{normal text}{bg=white,fg=black}
-
-
-\begin{frame}[t]
-    \frametitle{AVAILABLE}
-    \framesubtitle{COLORS}
-
-    \begin{columns}
-        \begin{column}{0.5\textwidth}
-\printcolour{Black}
-\printcolour{Charcoal}
-\printcolour{Grey}
-\printcolour{Stone}
-\printcolour{White}
-\printcolour{Dark Green}
-\printcolour{Teal Green}
-        \end{column}
-        \begin{column}{0.5\textwidth}
-\printcolour{Burgundy}
-\printcolour{Pink}
-\printcolour{Orange}
-\printcolour{Yellow}
-\printcolour{Green}
-\printcolour{Sky Blue}
-\printcolour{Blue}
-        \end{column}
-    \end{columns}
-\end{frame}
-
-
-\begin{frame}[t]
-    \frametitle{AVAILABLE COLOURS}
-    \framesubtitle{OLD PALETTE}
-
-    \begin{columns}
-        \begin{column}{0.3\textwidth}
-\printcolour{Atlantic Blue}
-\printcolour{Presentation Blue}
-\printcolour{Sunrise Gold}
-\printcolour{Classic Black}
-\printcolour{White}
-\printcolour{Deep plum}
-\printcolour{Violet}
-        \end{column}
-        \begin{column}{0.3\textwidth}
-\printcolour{Indigo}
-\printcolour{Cyan}
-\printcolour{Regal blue}
-\printcolour{Turquoise}
-\printcolour{Rasberry}
-\printcolour{Rose}
-\printcolour{Berry}
-        \end{column}
-        \begin{column}{0.3\textwidth}
-\printcolour{Tangerine}
-\printcolour{Pumpkin}
-\printcolour{Lemon}
-\printcolour{Lime}
-\printcolour{Leaf green}
-\printcolour{Pepper green}
-        \end{column}
-    \end{columns}
-\end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
 % COLOUR PROFILES
-% can be enabled by passing the colourprofile argument to a frame environment.
-% e.g. \begin{frame}[t,colourprofile={Dark Green}]
+% can be enabled by passing the uolcolours argument to a frame environment.
+% e.g. \begin{frame}[t,uolcolours={Dark Green}]
 %
 % The available keys are
 % Teal Green
@@ -216,10 +248,8 @@ The following rules apply to all witches and wizards:
 % Dark Green
 % Burgundy
 
-\begin{frame}[t,colourprofile={Dark Green}]
-    \frametitle{COLOUR PROFILES}
-    \framesubtitle{DARK GREEN}
 
+\newcommand{\democontent}{
     Content.
     \lipsum[1][1-2]
 
@@ -240,5 +270,31 @@ The following rules apply to all witches and wizards:
             \end{enumerate}
         \end{column}
     \end{columns}
+}
+%\pgfkeys{/uol/color/style=Pink}
+
+\begin{frame}%[uolcolours]
+    \frametitle{COLOUR PROFILES}
+    \framesubtitle{DARK GREEN}
+
+    \democontent
 \end{frame}
+\begin{frame}%[uolcolours=Pink]
+    \frametitle{COLOUR PROFILES}
+    \framesubtitle{Pink}
+    \democontent
+\end{frame}
+\uolcolours{Dark Green}
+\begin{frame}[uolcolours=Teal Green]
+    \frametitle{COLOUR PROFILES}
+    \framesubtitle{DARK GREEN}
+    \democontent
+    %\pgfkeysvalueof{/uol/color/styleprevious}
+\end{frame}
+\begin{frame}
+    \frametitle{COLOUR PROFILES}
+    \framesubtitle{DEFAULT}
+    \democontent
+\end{frame}
+
 \end{document}

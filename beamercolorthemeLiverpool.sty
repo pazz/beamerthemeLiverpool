@@ -85,7 +85,7 @@
 % give them names and associate commands
 \pgfkeys{/uol/color/style/.cd,
 .is choice,
-Skye Blue/.code=\uol@color@style@skyblue,
+Sky Blue/.code=\uol@color@style@skyblue,
 Teal Green/.code=\uol@color@style@teal,
 Orange/.code={\uol@color@style@orange},
 Grey/.code={\uol@color@style@grey},
@@ -189,4 +189,33 @@ default/.code={\uol@color@style@default},
 \usebeamercolor[fg]{normal text}
 }
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% COLOUR PROFILES
+%
+% The implementation follows
+% https://tex.stackexchange.com/questions/257300/passing-arguments-to-custom-frame-option
+%
+% Define uolcolours argument and use it to set the profile
+% The code is adapted from the metropolis/moloch theme
+\providebool{uol@standout}
+\define@key{beamerframe}{uolcolours}{%
+  \booltrue{uol@standout}
+  \begingroup
+   % remember old colour profile in case it is set already and this frame overides it temporarily
+  \pgfkeyssetvalue{/uol/color/styleprevious}{\pgfkeysvalueof{/uol/color/stylecurrent}}
+  \pgfkeys{/uol/color/style={#1}}
+}
+
+\pretocmd{\beamer@reseteecodes}{%
+  \ifbool{uol@standout}{ % if frame parameter was used
+    \endgroup
+    \boolfalse{uol@standout}
+    \pgfkeyssetvalue{/uol/color/stylecurrent}{\pgfkeysvalueof{/uol/color/styleprevious}}  % reset colour profile
+  }{}
+}{}{}
+
+
+% Macro for quickly overloading colour profiles
+\NewDocumentCommand{\uolcolours}{m}{\pgfkeys{/uol/color/style=#1}}
 \mode<all>
