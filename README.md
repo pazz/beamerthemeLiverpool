@@ -1,7 +1,8 @@
 UoL LaTeX Beamer template
 ------------------------------------
 
-See [`example.tex`](example.tex) and [`example.pdf`](example.pdf).
+See [`example.tex`](example.tex) and [`example.pdf`](../-/jobs/artifacts/master/raw/example.pdf?job=build).
+
 
 # Usage:
 * `\usetheme{Liverpool}`

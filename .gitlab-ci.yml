@@ -1,0 +1,9 @@
+image: danteev/texlive
+
+build:
+  script:
+    - latexmk -pdf example.tex
+  artifacts:
+    paths:
+      - "example.pdf"
+
