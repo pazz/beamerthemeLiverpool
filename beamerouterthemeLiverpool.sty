@@ -11,7 +11,7 @@
 % For example, \uolbrick[south west][north west][red][green]{Red bricks are cool}{Green Brick}
 %
 \NewDocumentCommand{\uolbricks}{ O{} O{} O{south} O{north west} m m }{
-  \begin{tikzpicture}[brick/.style={outer sep=0pt,draw=fg,align=left}]
+  \begin{tikzpicture}[brick/.style={outer sep=0pt,draw=fg,align=left,line width=0.075em}]
       \node[brick,anchor=east,#1] (top) at (0,0){#5};
       \node[brick,anchor=#4,#2] (below) at (top.#3){#6};
   \end{tikzpicture}
@@ -20,7 +20,7 @@
 % Draw a single brick
 % arguments as above but only style1 and content1
 \NewDocumentCommand{\uolbrick}{O{} m }{
-  \begin{tikzpicture}[brick/.style={outer sep=0pt,draw=fg,align=left}]
+  \begin{tikzpicture}[brick/.style={outer sep=0pt,draw=fg,align=left,line width=0.075em}]
       \node[brick,#1] (top) at (0,0){#2};
   \end{tikzpicture}
 }
