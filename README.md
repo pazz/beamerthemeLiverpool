@@ -22,6 +22,7 @@ are welcome! Here are some pointers.
 - [ ] make a nicer sectionpage
 - [X] add simple switch to change color scheme (now via `\uolcolours{PROFILE}`
 - [X] make flashy title page optional (see inline doc in `example.tex`)
+- [X] larger/bf items and enumerations
 
 ## Helpful resources
 

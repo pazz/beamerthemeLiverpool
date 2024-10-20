@@ -3,4 +3,22 @@
 \setbeamerfont{block title}{series=\bfseries}
 \setbeamerfont{alerted text}{series=\bfseries}
 
+% ITEMIZE
+% use bullet points for itemize environments
+
+% We adjust the definitions in beamerbaseauxtemplates.sty
+% and insert a scalebox to make them slightly larger.
+% Compared to using \setbeamerfont{itemize item}{size=\Large} or similar, this approach avoids hardcoding of the font size
+% and so the bullet points grow/shrink with the surrounding font size.
+
+\setbeamertemplate{itemize item}{\usebeamerfont*{itemize item}\raise0pt\hbox{\scalebox{1.25}{\donotcoloroutermaths$\bullet$}}}
+\setbeamertemplate{itemize subitem}{\usebeamerfont*{itemize subitem}\raise0pt\hbox{\scalebox{1.25}{\donotcoloroutermaths$\bullet$}}}
+\setbeamertemplate{itemize subsubitem}{\usebeamerfont*{itemize subsubitem}\raise0pt\hbox{\scalebox{1.25}{\donotcoloroutermaths$\bullet$}}}
+
+
+% ENUMERATE
+% we use boldface Arabic numbering for enumerations
+\setbeamertemplate{enumerate items}[default]
+\setbeamerfont{enumerate item}{series=\bfseries}
+
 \mode<all>
