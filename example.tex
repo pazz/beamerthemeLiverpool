@@ -139,7 +139,7 @@ No Muggle knows about the magical world
 
 % This is just to simplyfy the next slides
 \newcommand{\printcolour}[1]{{\colorbox{#1}{\mbox{\strut}}\textcolor{#1}{#1}}\\}
-\newcommand{\printcolourbox}[2]{\small \uolbrick[fill=#1,text=#2,draw=black]{#1}}
+\newcommand{\printcolourbox}[3]{{\small\uolbrick[fill=#1,text=#2,draw=black]{#3}}}
 
 \newcommand{\democontent}{
     Content.
@@ -165,7 +165,7 @@ No Muggle knows about the magical world
 
 
 \begin{frame}[t,fragile]
-    \frametitle{COLORS}
+    \frametitle{COLOURS}
     \framesubtitle{Available colours}
 
     The following UOL branded colours are available
@@ -196,22 +196,22 @@ No Muggle knows about the magical world
     \end{columns}
 \end{frame}
     \begin{frame}[t,fragile]
-    \frametitle{COLORS}
+    \frametitle{COLOURS}
     \framesubtitle{Profiles}
 
     This theme also defines some colour profiles that you can use for standout frames.
     They set several colour elements to sensible colour combinations.
 
     \begin{block}{Defined Profiles}
-        \printcolourbox{Sky Blue}{White}
-        \printcolourbox{Teal Green}{White}
-        \printcolourbox{Orange}{White}
-        \printcolourbox{Grey}{White}
-        \printcolourbox{Pink}{White}
-        \printcolourbox{Burgundy}{White}
-        \printcolourbox{Dark Green}{White}
-        \printcolourbox{Blue}{White}
-        %\colorbox{White}{\textcolor{Black}{default}}
+        \printcolourbox{Sky Blue}{White}{Sky Blue}
+        \printcolourbox{Teal Green}{White}{Teal Green}
+        \printcolourbox{Orange}{White}{Orange}
+        \printcolourbox{Grey}{White}{Grey}
+        \printcolourbox{Pink}{White}{Pink}
+        \printcolourbox{Burgundy}{White}{Burgundy}
+        \printcolourbox{Dark Green}{White}{Dark Green}
+        \printcolourbox{Blue}{White}{Blue}
+        \printcolourbox{White}{black}{default}
     \end{block}
 
 % \begin{frame}[t]
