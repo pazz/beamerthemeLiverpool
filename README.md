@@ -20,9 +20,7 @@ are welcome! Here are some pointers.
 
 - [ ] finetune structure colours and spacing
 - [ ] make a nicer sectionpage
-- [ ] pre-set colours for hyperref (`\href` and `\url`)
-- [ ] include `\email` on title page?
-- [X] add simple switch to change color scheme (now via `\uolcolours{bg}{fg}`
+- [X] add simple switch to change color scheme (now via `\uolcolours{PROFILE}`
 - [X] make flashy title page optional (see inline doc in `example.tex`)
 
 ## Helpful resources

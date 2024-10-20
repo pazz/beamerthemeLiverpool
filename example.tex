@@ -1,4 +1,6 @@
-\documentclass[aspectratio=169]{beamer}
+\documentclass[
+aspectratio=169,
+]{beamer}
 \usetheme{Liverpool}
 
 \usepackage{lipsum}
@@ -96,6 +98,36 @@ No Muggle knows about the magical world
 
 \end{frame}
 
+%%%%%%%%%%%%%%%%%%
+% BRICKS
+%
+
+\section{Bricks}
+\begin{frame}[t,fragile]
+    \frametitle{BRICKS}
+    
+    You can insert UOL-style bricks via the \verb|\uolbrick| and \verb|\uolbrick| commands.
+
+
+    \bigskip
+    \uolbricks{Here is a pair}{of bricks}
+    {
+    \LARGE
+    \uolbricks{They grow automatically}{with the font size} 
+    }
+    
+    \bigskip
+    \uolbricks[draw=Black,fill=Pink,text=White]{Here are}{two more} 
+\uolbricks[draw=Blue,fill=Sky Blue,text=White][draw=Blue,fill=Sky Blue,text=Blue]{They can be themed}{individually} 
+
+    \bigskip
+    \uolbricks[][][south west][north west]{You can arrange them dynamically}{like this}
+    \uolbricks[][][south east][north east]{or like}{this}
+    \uolbricks[][][east][west]{or like}{this}
+
+    \bigskip
+\uolbrick[]{This is a single brick}
+\end{frame}
 
 %%%%%%%%%%%%
 % COLOURS
@@ -103,8 +135,31 @@ No Muggle knows about the magical world
 \section{Colours}
 
 % This is just to simplyfy the next slides
-\newcommand{\printcolour}[1]{{\colorbox{#1}{\mbox{\strut}}\textcolor{#1}{#1}}}
-\newcommand{\printcolourbox}[2]{{\colorbox{#1}{\textcolor{#2}{#1}}}}
+\newcommand{\printcolour}[1]{{\colorbox{#1}{\mbox{\strut}}\textcolor{#1}{#1}}\\}
+\newcommand{\printcolourbox}[2]{\small \uolbrick[fill=#1,text=#2,draw=black]{#1}}
+
+\newcommand{\democontent}{
+    Content.
+    \lipsum[1][1-2]
+
+    \begin{columns}[T]
+        \begin{column}{0.5\textwidth}
+            \begin{itemize}
+                \item \lipsum[1][2]
+                \item \lipsum[2][2]
+                \item \lipsum[3][2]
+            \end{itemize}
+        \end{column}
+        \begin{column}{0.5\textwidth}
+            \begin{enumerate}
+                \item \lipsum[3][1]
+                \item \lipsum[4][2]
+                \item \lipsum[5][2]
+            \end{enumerate}
+        \end{column}
+    \end{columns}
+}
+
 
 \begin{frame}[t,fragile]
     \frametitle{COLORS}
@@ -142,7 +197,7 @@ No Muggle knows about the magical world
     \framesubtitle{Profiles}
 
     This theme also defines some colour profiles that you can use for standout frames.
-    They set several colour elements to sensible color combinations.
+    They set several colour elements to sensible colour combinations.
 
     \begin{block}{Defined Profiles}
         \printcolourbox{Sky Blue}{White}
@@ -155,19 +210,6 @@ No Muggle knows about the magical world
         \printcolourbox{Blue}{White}
         %\colorbox{White}{\textcolor{Black}{default}}
     \end{block}
-
-
-    \begin{block}{How to use them}
- You can switch to some predefined colour profiles mid presentation in two ways:
- \begin{enumerate}
-     \item use \verb|\uolcolours{PRESET}| to cause subsequent frames to use the colours from PRESET;
-     \item 
-         Give a parameter "uolcolours" directly to a frame environment to affect only that one frame:
-         \verb|\begin{frame}[uolcolours=PRESET] ... \end{frame}|
- \end{enumerate}
-    \end{block}
-\end{frame}
-
 
 % \begin{frame}[t]
 %     \frametitle{AVAILABLE COLOURS}
@@ -203,96 +245,92 @@ No Muggle knows about the magical world
 %     \end{columns}
 % \end{frame}
 
-\uolcolours{Teal Green}
-\begin{frame}
+
+    \begin{block}{How to use them}
+ You can switch to some predefined colour profiles mid presentation in two ways:
+ \begin{enumerate}
+     \item use \verb|\uolcolours{PRESET}| to cause subsequent frames to use the colours from PRESET;
+     \item 
+         Give a parameter "uolcolours" directly to a frame environment to affect only that one frame:
+         \verb|\begin{frame}[uolcolours=PRESET] ... \end{frame}|
+ \end{enumerate}
+    \end{block}
+\end{frame}
+
+
+
+\begin{frame}[uolcolours=Sky Blue]
     \uolbrick[font=\LARGE\bfseries]{HELLO}
     \begin{block}{Here is some text in a block}
       \lipsum[1][1-5]
     \end{block}
 \end{frame}
+\begin{frame}[uolcolours=Sky Blue]
+    \frametitle{COLOUR PROFILE}
+    \framesubtitle{SKY BLUE}
+    \democontent
+\end{frame}
 
-\begin{frame}[uolcolours=Orange]
-    \uolbrick[font=\LARGE\bfseries]{THERE}
+\begin{frame}[uolcolours=Teal Green]
+    \uolbrick[font=\LARGE\bfseries]{HELLO!}
     \begin{block}{Here is some more text in a block}
         \lipsum[1][1-5]\footnote{This is a slide without tile/subtitle but with a custom UOL brick and a titled block.}
     \end{block}
 \end{frame}
-
-\begin{frame}
-\frametitle{Rules}
-\framesubtitle{Rules of Magical People}
-
-
-The following rules apply to all witches and wizards:
-\begin{itemize}
-\item Don't eat Muggles
-\item Don't kill Muggles
-\end{itemize}
-
-\end{frame}
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
-% COLOUR PROFILES
-% can be enabled by passing the uolcolours argument to a frame environment.
-% e.g. \begin{frame}[t,uolcolours={Dark Green}]
-%
-% The available keys are
-% Teal Green
-% Skye Blue
-% Orange
-% Grey
-% Pink
-% Burgundy
-% Dark Green
-% Burgundy
-
-
-\newcommand{\democontent}{
-    Content.
-    \lipsum[1][1-2]
-
-    \begin{columns}[T]
-        \begin{column}{0.5\textwidth}
-            \begin{itemize}
-                \item \lipsum[1][2]
-                \item \lipsum[2][2]
-                \item \lipsum[3][2]
-            \end{itemize}
-        \end{column}
-
-        \begin{column}{0.5\textwidth}
-            \begin{enumerate}
-                \item \lipsum[3][1]
-                \item \lipsum[4][2]
-                \item \lipsum[5][2]
-            \end{enumerate}
-        \end{column}
-    \end{columns}
-}
-%\pgfkeys{/uol/color/style=Pink}
-
-\begin{frame}%[uolcolours]
-    \frametitle{COLOUR PROFILES}
-    \framesubtitle{DARK GREEN}
-
-    \democontent
-\end{frame}
-\begin{frame}%[uolcolours=Pink]
-    \frametitle{COLOUR PROFILES}
-    \framesubtitle{Pink}
-    \democontent
-\end{frame}
-\uolcolours{Dark Green}
 \begin{frame}[uolcolours=Teal Green]
-    \frametitle{COLOUR PROFILES}
+    \frametitle{COLOUR PROFILE}
+    \framesubtitle{TEAL GREEN}
+    \democontent
+\end{frame}
+
+\uolcolours{Orange}
+\begin{frame}
+    \uolbrick[font=\LARGE\bfseries]{HELLO ORANGE!}
+    \begin{block}{Here is some more text in a block}
+        \lipsum[1][2-7]
+    \end{block}
+\end{frame}
+
+\begin{frame}
+    \frametitle{COLOUR PROFILE}
+    \framesubtitle{ORANGE}
+    \democontent
+\end{frame}
+
+
+\begin{frame}[uolcolours=Pink]
+    \frametitle{COLOUR PROFILE}
+    \framesubtitle{PINK}
+    \democontent
+\end{frame}
+
+\begin{frame}[uolcolours=Grey]
+    \frametitle{COLOUR PROFILE}
+    \framesubtitle{GREY}
+    \democontent
+\end{frame}
+
+\begin{frame}[uolcolours=Burgundy]
+    \frametitle{COLOUR PROFILE}
+    \framesubtitle{BURGUNDY}
+    \democontent
+\end{frame}
+
+\begin{frame}[uolcolours=Dark Green]
+    \frametitle{COLOUR PROFILE}
     \framesubtitle{DARK GREEN}
     \democontent
-    %\pgfkeysvalueof{/uol/color/styleprevious}
 \end{frame}
+
+\begin{frame}[uolcolours=Blue]
+    \frametitle{COLOUR PROFILE}
+    \framesubtitle{BLUE}
+    \democontent
+\end{frame}
+
+\uolcolours{default}
 \begin{frame}
-    \frametitle{COLOUR PROFILES}
+    \frametitle{COLOUR PROFILE}
     \framesubtitle{DEFAULT}
     \democontent
 \end{frame}
