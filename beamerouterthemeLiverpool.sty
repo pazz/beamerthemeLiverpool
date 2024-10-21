@@ -27,8 +27,9 @@
 % For example, \uolbrick[south west][north west][red][green]{Red bricks are cool}{Green Brick}
 %
 \NewDocumentCommand{\uolbricks}{ O{} O{} O{south} O{north west} m m }{
-  \begin{tikzpicture}
-      \node[brick,anchor=east,#1] (top) at (0,0){#5};
+    \begin{tikzpicture}[baseline]
+      \node[brick,anchor=south,#1] (top) at (0,0){#5};
+      %\node[red] (X) at (0,0) {X}; % debug: X marks the spot
       \node[brick,anchor=#4,#2] (below) at (top.#3){#6};
   \end{tikzpicture}
 }
@@ -36,8 +37,9 @@
 % Draw a single brick
 % arguments as above but only style1 and content1
 \NewDocumentCommand{\uolbrick}{O{} m }{
-  \begin{tikzpicture}
-      \node[brick,#1] (top) at (0,0){#2};
+    \begin{tikzpicture}[baseline]
+      \node[brick,anchor=south,#1] (top) at (0,0){#2};
+      %\node[red] (X) at (0,0) {X}; % debug: X marks the spot
   \end{tikzpicture}
 }
 
