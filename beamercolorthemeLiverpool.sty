@@ -75,6 +75,14 @@
 % This prevents the qed box from using structure's colour
 \setbeamercolor*{qed symbol}{use=normal text}
 
+% TITLE PAGE COLORS
+%\setbeamercolor*{title}{bg=Blue,fg=White}
+\setbeamercolor*{title}{parent=titlelike}
+\setbeamercolor*{date}{parent=title,bg=}
+\setbeamercolor*{author}{parent=title,bg=}
+\setbeamercolor*{institute}{parent=title,bg=}
+
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -100,6 +108,7 @@ default/.code={\uol@color@style@default},
 \newcommand{\uol@color@style@teal}{
 \setbeamercolor*{structure}{fg=Yellow}
 \setbeamercolor*{titlelike}{fg=White}
+\setbeamercolor*{title}{use=titlelike}
 \setbeamercolor*{block title}{fg=White}
 \setbeamercolor*{block body}{fg=White}
 \setbeamercolor*{alerted text}{fg=Pink}
@@ -110,6 +119,7 @@ default/.code={\uol@color@style@default},
 \newcommand{\uol@color@style@skyblue}{
 \setbeamercolor*{structure}{fg=Yellow}
 \setbeamercolor*{titlelike}{fg=White}
+\setbeamercolor*{title}{use=titlelike}
 \setbeamercolor*{block title}{fg=White}
 \setbeamercolor*{block body}{fg=White}
 \setbeamercolor*{alerted text}{fg=Pink}
@@ -120,6 +130,7 @@ default/.code={\uol@color@style@default},
 \newcommand{\uol@color@style@orange}{
 \setbeamercolor*{structure}{fg=Yellow}
 \setbeamercolor*{titlelike}{fg=White}
+\setbeamercolor*{title}{use=titlelike}
 \setbeamercolor*{block title}{fg=White}
 \setbeamercolor*{block body}{fg=White}
 \setbeamercolor*{alerted text}{fg=Pink}
@@ -130,6 +141,7 @@ default/.code={\uol@color@style@default},
 \newcommand{\uol@color@style@grey}{
 \setbeamercolor*{structure}{fg=White}
 \setbeamercolor*{titlelike}{fg=White}
+\setbeamercolor*{title}{use=titlelike}
 \setbeamercolor*{block title}{fg=White}
 \setbeamercolor*{block body}{fg=White}
 \setbeamercolor*{alerted text}{fg=Pink}
@@ -140,6 +152,7 @@ default/.code={\uol@color@style@default},
 \newcommand{\uol@color@style@pink}{
 \setbeamercolor*{structure}{fg=White}
 \setbeamercolor*{titlelike}{fg=White}
+\setbeamercolor*{title}{use=titlelike}
 \setbeamercolor*{block title}{fg=White}
 \setbeamercolor*{block body}{fg=White}
 \setbeamercolor*{alerted text}{fg=Sky Blue}
@@ -151,6 +164,7 @@ default/.code={\uol@color@style@default},
 \newcommand{\uol@color@style@darkgreen}{
 \setbeamercolor*{structure}{fg=Yellow}
 \setbeamercolor*{titlelike}{fg=White}
+\setbeamercolor*{title}{use=titlelike}
 \setbeamercolor*{block title}{fg=White}
 \setbeamercolor*{block body}{fg=White}
 \setbeamercolor*{alerted text}{fg=Yellow}
@@ -161,6 +175,7 @@ default/.code={\uol@color@style@default},
 \newcommand{\uol@color@style@burgundy}{
 \setbeamercolor*{structure}{fg=White}
 \setbeamercolor*{titlelike}{fg=White}
+\setbeamercolor*{title}{use=titlelike}
 \setbeamercolor*{block title}{fg=White}
 \setbeamercolor*{block body}{fg=White}
 \setbeamercolor*{alerted text}{fg=Pink}
@@ -171,6 +186,7 @@ default/.code={\uol@color@style@default},
 \newcommand{\uol@color@style@blue}{
 \setbeamercolor*{structure}{fg=White}
 \setbeamercolor*{titlelike}{fg=White}
+\setbeamercolor*{title}{use=titlelike}
 \setbeamercolor*{block title}{fg=White}
 \setbeamercolor*{block body}{fg=White}
 \setbeamercolor*{alerted text}{fg=Pink}
@@ -179,8 +195,9 @@ default/.code={\uol@color@style@default},
 \usebeamercolor[fg]{normal text}
 }
 \newcommand{\uol@color@style@default}{
-\setbeamercolor*{structure}{fg=Black}
+\setbeamercolor*{structure}{fg=Sky Blue}
 \setbeamercolor*{titlelike}{fg=Black}
+\setbeamercolor*{title}{bg=Blue, fg=White}  % override
 \setbeamercolor*{block title}{fg=Black}
 \setbeamercolor*{block body}{fg=Black}
 \setbeamercolor*{alerted text}{fg=Pink}
@@ -190,6 +207,7 @@ default/.code={\uol@color@style@default},
 }
 
 
+\uol@color@style@default
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % COLOUR PROFILES
 %
