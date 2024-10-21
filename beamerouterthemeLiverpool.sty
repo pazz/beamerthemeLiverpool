@@ -1,4 +1,20 @@
 \mode<presentation>
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% BRICKS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% set default brick style
+\tikzset{
+    brick/.style={
+      draw=fg,
+      line width=0.075em,
+      align=left,
+      outer sep=0pt,
+      text depth=0ex,
+      minimum size=3.3ex,
+    }
+}
 % draw two bricks
 %
 % \uolbrick[pos1][pos2][style1][style2]{content1}{content2} % where
@@ -11,7 +27,7 @@
 % For example, \uolbrick[south west][north west][red][green]{Red bricks are cool}{Green Brick}
 %
 \NewDocumentCommand{\uolbricks}{ O{} O{} O{south} O{north west} m m }{
-  \begin{tikzpicture}[brick/.style={outer sep=0pt,draw=fg,align=left,line width=0.075em}]
+  \begin{tikzpicture}
       \node[brick,anchor=east,#1] (top) at (0,0){#5};
       \node[brick,anchor=#4,#2] (below) at (top.#3){#6};
   \end{tikzpicture}
@@ -20,7 +36,7 @@
 % Draw a single brick
 % arguments as above but only style1 and content1
 \NewDocumentCommand{\uolbrick}{O{} m }{
-  \begin{tikzpicture}[brick/.style={outer sep=0pt,draw=fg,align=left,line width=0.075em}]
+  \begin{tikzpicture}
       \node[brick,#1] (top) at (0,0){#2};
   \end{tikzpicture}
 }
