@@ -45,10 +45,11 @@ aspectratio=169,
             \begin{itemize}
                 \item \lipsum[1][2]
                 \item \lipsum[2][2]
-                \item \lipsum[3][2]
-
-                    \LARGE
-                \item LALALA
+                    \begin{itemize}
+                        \item \lipsum[3][1]
+                        \item \lipsum[4][2]
+                    \end{itemize}
+                \item \lipsum[5][2]
             \end{itemize}
         \end{column}
 
@@ -114,22 +115,27 @@ No Muggle knows about the magical world
 
     \bigskip
     \uolbricks{Here is a pair}{of bricks}
-    {
-    \LARGE
-    \uolbricks{They grow automatically}{with the font size} 
-    }
-    
-    \bigskip
-    \uolbricks[draw=Black,fill=Pink,text=White]{Here are}{two more} 
-\uolbricks[draw=Blue,fill=Sky Blue,text=White][draw=Blue,fill=Sky Blue,text=Blue]{They can be themed}{individually} 
+    and here
+    \uolbrick[]{is a single brick}
 
     \bigskip
-    \uolbricks[][][south west][north west]{You can arrange them dynamically}{like this}
+    {
+    \tiny
+    \uolbricks{They shrink}{with the font size} 
+    }
+    {
+    \Huge
+    \uolbrick{OR GROW} 
+    }
+    \uolbricks[draw=black,fill=Pink,text=White][draw=Blue,fill=Sky Blue,text=Blue]{and can be themed}{individually} 
+
+    \bigskip
+    \uolbricks[][][south west][north west]{You can arrange them}{like this}
     \uolbricks[][][south east][north east]{or like}{this}
     \uolbricks[][][east][west]{or like}{this}
+    \uolbricks[][][north east][south]{or like}{this}
+    \uolbricks[][][south west][north]{or like}{this}
 
-    \bigskip
-\uolbrick[]{This is a single brick}
 \end{frame}
 
 %%%%%%%%%%%%
