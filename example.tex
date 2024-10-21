@@ -13,9 +13,9 @@ aspectratio=169,
 % short institute displayed in top right corner of front page
 \institute[Computer Science]{Liverpool}
 % set to empty to hide
-%\institute[]{Liverpool}
+% \institute[]{Liverpool}
 % otherwise defaults to the institute
-\institute{Liverpool}
+% \institute{Liverpool}
 
 
 \begin{document}
@@ -33,10 +33,9 @@ aspectratio=169,
 \maketitle
 \end{frame}
 
-\begin{frame}[t]
-    \frametitle{Slide Title}
-    \framesubtitle{Second Line}
 
+% DEMO CONTENT WILL BE RE-USED
+\newcommand{\democontent}{
     Content.
     \lipsum[1][1-2]
 
@@ -61,6 +60,13 @@ aspectratio=169,
             \end{enumerate}
         \end{column}
     \end{columns}
+}
+
+\begin{frame}[t]
+    \frametitle{Slide Title}
+    \framesubtitle{Second Line}
+
+\democontent 
 \end{frame}
 
 \section{Blocks}
@@ -145,29 +151,8 @@ No Muggle knows about the magical world
 
 % This is just to simplyfy the next slides
 \newcommand{\printcolour}[1]{{\colorbox{#1}{\mbox{\strut}}\textcolor{#1}{#1}}\\}
-\newcommand{\printcolourbox}[3]{{\small\uolbrick[fill=#1,text=#2,draw=black]{#3}}}
+\newcommand{\printcolourbox}[3]{{\scriptsize\uolbrick[fill=#1,text=#2,draw=black]{#3}}}
 
-\newcommand{\democontent}{
-    Content.
-    \lipsum[1][1-2]
-
-    \begin{columns}[T]
-        \begin{column}{0.5\textwidth}
-            \begin{itemize}
-                \item \lipsum[1][2]
-                \item \lipsum[2][2]
-                \item \lipsum[3][2]
-            \end{itemize}
-        \end{column}
-        \begin{column}{0.5\textwidth}
-            \begin{enumerate}
-                \item \lipsum[3][1]
-                \item \lipsum[4][2]
-                \item \lipsum[5][2]
-            \end{enumerate}
-        \end{column}
-    \end{columns}
-}
 
 
 \begin{frame}[t,fragile]
@@ -203,12 +188,13 @@ No Muggle knows about the magical world
 \end{frame}
     \begin{frame}[t,fragile]
     \frametitle{COLOURS}
-    \framesubtitle{Profiles}
+    \framesubtitle{Colour profiles}
 
-    This theme also defines some colour profiles that you can use for standout frames.
-    They set several colour elements to sensible colour combinations.
+    \begin{block}{}
+    This theme also defines colour profiles that 
+    set several elements to sensible colour combinations.
+    They are named after the dominant background colour:
 
-    \begin{block}{Defined Profiles}
         \printcolourbox{Sky Blue}{White}{Sky Blue}
         \printcolourbox{Teal Green}{White}{Teal Green}
         \printcolourbox{Orange}{White}{Orange}
