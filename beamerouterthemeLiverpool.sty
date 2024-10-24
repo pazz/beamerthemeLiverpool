@@ -4,14 +4,12 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % BACKGROUND CANVAS
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\defbeamertemplate*{background}{image right}[1][UoL-vg.jpg]{
+\defbeamertemplate{background}{image right}[1][]{
   % only change first slide, rest defaults to single colour (normal text.bg)
-  \ifnum\thepage=1\relax%
    \begin{tikzpicture}
    \useasboundingbox (0,0) rectangle(\the\paperwidth,\the\paperheight);
    \node[inner sep=0pt,anchor=north east] at (\the\paperwidth,\the\paperheight) {\includegraphics[height=\the\paperheight]{#1}};
    \end{tikzpicture}
-  \fi
 }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % TITLE PAGE

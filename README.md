@@ -18,6 +18,7 @@ are welcome! Here are some pointers.
 
 ## TODO
 
+- [ ] Institute: allow for multiline
 - [ ] finetune structure colours and spacing
 - [ ] make a nicer sectionpage
 - [X] add simple switch to change color scheme (now via `\uolcolours{PROFILE}`
