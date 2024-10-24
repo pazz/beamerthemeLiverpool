@@ -19,21 +19,36 @@ aspectratio=169,
 % Titling: this theme redefines the positions of title, author, date and institute.
 % The default titling can be recovered by setting
 %   \setbeamertemplate{title page}[default]
-% To set fancy colours use the \uolcolours command or frame-parameter as described below.
+% To adjust the colours you can set the colour of "normal text" (or individual title elements) as follows
+%   \setbeamercolor{normal text}{fg=white,bg=black}
+% or use the \uolcolours command or frame-parameter.
 
 
 % TITLE DEMO 1
 % Let's fence the title frame so that theming is local.
 {
 \setbeamertemplate{background}[image right][extra/uol-vg.jpg]
-\uolcolours{Blue}
-
+\setbeamercolor{normal text}{fg=white,bg=Blue}
 \begin{frame}
 \maketitle
 \end{frame}
 }
 
+
 % TITLE DEMO 2
+
+{
+\setbeamercolor{normal text}{fg=White,bg=Sky Blue}
+\setbeamercolor{institute}{fg=Black}
+\setbeamercolor{author}{fg=Black}
+\setbeamercolor{date}{fg=Pink}
+\setbeamerfont{author}{series=\bf,size=\huge}
+\setbeamertemplate{background}[image right][extra/uol-vg-bw.png]
+\maketitle
+}
+
+
+% TITLE DEMO 3
 \setbeamertemplate{background}[image right][extra/uol-vg-bw.png]  % this is document-wide
 \begin{frame}[uolcolours=Pink]  % use uolcolours parameter to make frame follow colour profile
 \maketitle
