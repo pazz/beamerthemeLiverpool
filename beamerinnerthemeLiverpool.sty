@@ -21,5 +21,8 @@
 % we use boldface Arabic numbering for enumerations
 \setbeamertemplate{enumerate items}[default]
 \setbeamerfont{enumerate item}{series=\bfseries}
+% for reasons, and unlike for itemize, "enumerate items" is not a parent of "enumerate sub(sub)item" so the following have to be set manually. Oversight in beamer.
+\setbeamerfont{enumerate subitem}{series=\bfseries}
+\setbeamerfont{enumerate subsubitem}{series=\bfseries}
 
 \mode<all>

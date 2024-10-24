@@ -55,33 +55,23 @@
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
-%
-% DEFAULT COLOUR SETTINGS
 
-% Titles,subtitles of frames
-\setbeamercolor*{titlelike}{use=normal text}
-\setbeamercolor*{structure}{fg=Sky Blue}
-
-\setbeamercolor{palette primary}{fg=Orange}
+%\setbeamercolor{palette primary}{fg=Orange}
 %\setbeamercolor{palette secondary}{fg=Blue}
 %\setbeamercolor{palette tertiary}{fg=Rose}
 %\setbeamercolor{palette quaternary}{fg=Deep plum}
 
-\setbeamercolor*{block title}{use=normal text}
-
-% alerted text and title of alertblock
-\setbeamercolor*{alerted text}{fg=Pink}
-
-% This prevents the qed box from using structure's colour
-\setbeamercolor*{qed symbol}{use=normal text}
-
-% TITLE PAGE COLORS
-%\setbeamercolor*{title}{bg=Blue,fg=White}
-\setbeamercolor*{title}{parent=titlelike}
+% title page colours all inherit from "normal text"
+\setbeamercolor*{title}{parent=normal text}
 \setbeamercolor*{date}{parent=title,bg=}
 \setbeamercolor*{author}{parent=title,bg=}
 \setbeamercolor*{institute}{parent=title,bg=}
 
+% Titles,subtitles of frames
+\setbeamercolor*{titlelike}{use=normal text}
+
+% This prevents the qed box from using structure's colour
+\setbeamercolor*{qed symbol}{use=normal text}
 
 
 
@@ -107,64 +97,52 @@ default/.code={\uol@color@style@default},
 % Define actual colour combinations
 \newcommand{\uol@color@style@teal}{
 \setbeamercolor*{structure}{fg=Yellow}
-\setbeamercolor*{titlelike}{fg=White}
-\setbeamercolor*{title}{use=titlelike}
 \setbeamercolor*{block title}{fg=White}
 \setbeamercolor*{block body}{fg=White}
-\setbeamercolor*{alerted text}{fg=Pink}
+\setbeamercolor*{alerted text}{fg=Blue}
 \setbeamercolor*{example text}{fg=Dark Green}
 \setbeamercolor*{normal text}{bg=Teal Green,fg=White}
 \usebeamercolor[fg]{normal text}
 }
 \newcommand{\uol@color@style@skyblue}{
 \setbeamercolor*{structure}{fg=Yellow}
-\setbeamercolor*{titlelike}{fg=White}
-\setbeamercolor*{title}{use=titlelike}
 \setbeamercolor*{block title}{fg=White}
 \setbeamercolor*{block body}{fg=White}
-\setbeamercolor*{alerted text}{fg=Pink}
-\setbeamercolor*{example text}{fg=Teal Green}
+\setbeamercolor*{alerted text}{fg=Blue}
+\setbeamercolor*{example text}{fg=Dark Green}
 \setbeamercolor*{normal text}{bg=Sky Blue,fg=White}
 \usebeamercolor[fg]{normal text}
 }
 \newcommand{\uol@color@style@orange}{
 \setbeamercolor*{structure}{fg=Yellow}
-\setbeamercolor*{titlelike}{fg=White}
-\setbeamercolor*{title}{use=titlelike}
 \setbeamercolor*{block title}{fg=White}
 \setbeamercolor*{block body}{fg=White}
-\setbeamercolor*{alerted text}{fg=Pink}
-\setbeamercolor*{example text}{fg=Teal Green}
+\setbeamercolor*{alerted text}{fg=Blue}
+\setbeamercolor*{example text}{fg=Dark Green}
 \setbeamercolor*{normal text}{bg=Orange,fg=White}
 \usebeamercolor[fg]{normal text}
 }
 \newcommand{\uol@color@style@grey}{
 \setbeamercolor*{structure}{fg=White}
-\setbeamercolor*{titlelike}{fg=White}
-\setbeamercolor*{title}{use=titlelike}
 \setbeamercolor*{block title}{fg=White}
 \setbeamercolor*{block body}{fg=White}
-\setbeamercolor*{alerted text}{fg=Pink}
-\setbeamercolor*{example text}{fg=Teal Green}
+\setbeamercolor*{alerted text}{fg=Charcoal}
+\setbeamercolor*{example text}{fg=Dark Green}
 \setbeamercolor*{normal text}{bg=Grey,fg=White}
 \usebeamercolor[fg]{normal text}
 }
 \newcommand{\uol@color@style@pink}{
 \setbeamercolor*{structure}{fg=White}
-\setbeamercolor*{titlelike}{fg=White}
-\setbeamercolor*{title}{use=titlelike}
 \setbeamercolor*{block title}{fg=White}
 \setbeamercolor*{block body}{fg=White}
-\setbeamercolor*{alerted text}{fg=Sky Blue}
-\setbeamercolor*{example text}{fg=Teal Green}
+\setbeamercolor*{alerted text}{fg=Blue}
+\setbeamercolor*{example text}{fg=Dark Green}
 \setbeamercolor*{normal text}{bg=Pink,fg=White}
 \usebeamercolor[fg]{normal text}
 }
 
 \newcommand{\uol@color@style@darkgreen}{
 \setbeamercolor*{structure}{fg=Yellow}
-\setbeamercolor*{titlelike}{fg=White}
-\setbeamercolor*{title}{use=titlelike}
 \setbeamercolor*{block title}{fg=White}
 \setbeamercolor*{block body}{fg=White}
 \setbeamercolor*{alerted text}{fg=Yellow}
@@ -174,31 +152,24 @@ default/.code={\uol@color@style@default},
 }
 \newcommand{\uol@color@style@burgundy}{
 \setbeamercolor*{structure}{fg=White}
-\setbeamercolor*{titlelike}{fg=White}
-\setbeamercolor*{title}{use=titlelike}
 \setbeamercolor*{block title}{fg=White}
 \setbeamercolor*{block body}{fg=White}
-\setbeamercolor*{alerted text}{fg=Pink}
+\setbeamercolor*{alerted text}{fg=Orange}
 \setbeamercolor*{example text}{fg=Teal Green}
 \setbeamercolor*{normal text}{bg=Burgundy,fg=White}
 \usebeamercolor[fg]{normal text}
 }
 \newcommand{\uol@color@style@blue}{
 \setbeamercolor*{structure}{fg=White}
-\setbeamercolor*{titlelike}{fg=White}
-\setbeamercolor*{title}{use=titlelike}
-\setbeamercolor*{block title}{fg=Orange}
+\setbeamercolor*{block title}{fg=Sky Blue}
 \setbeamercolor*{block body}{fg=White}
-\setbeamercolor*{alerted text}{fg=Pink}
+\setbeamercolor*{alerted text}{fg=Orange}
 \setbeamercolor*{example text}{fg=Teal Green}
 \setbeamercolor*{normal text}{bg=Blue,fg=White}
 \usebeamercolor[fg]{normal text}
 }
 \newcommand{\uol@color@style@default}{
 \setbeamercolor*{structure}{fg=Sky Blue}
-\setbeamercolor*{titlelike}{fg=Black}
-%\setbeamercolor*{title}{bg=Blue, fg=White}  % override
-\setbeamercolor*{title}{use=titlelike}
 \setbeamercolor*{block title}{fg=Black}
 \setbeamercolor*{block body}{fg=Black}
 \setbeamercolor*{alerted text}{fg=Pink}
