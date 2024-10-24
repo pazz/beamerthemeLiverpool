@@ -18,9 +18,9 @@ are welcome! Here are some pointers.
 
 ## TODO
 
-- [ ] Institute: allow for multiline
 - [ ] finetune structure colours and spacing
 - [ ] make a nicer sectionpage
+- [X] Institute: allow for multi-line
 - [X] add simple switch to change color scheme (now via `\uolcolours{PROFILE}`
 - [X] make flashy title page optional (see inline doc in `example.tex`)
 - [X] larger/bf items and enumerations

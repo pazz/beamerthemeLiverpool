@@ -19,17 +19,22 @@
 \defbeamertemplate*{title page}{Liverpool}[1][]{%
     \begin{beamercolorbox}{institute}
     % UOL logo top left
-    \tikz[baseline=0pt] {
-        \node[anchor=west,inner sep=0pt] (X) at (0,0) {
+    \tikz[baseline] {
+        \node[anchor=west,inner sep=0pt] (a) at (0,0) {
           \includegraphics[width=0.22\paperwidth]{uol-logo-uncoloured.pdf}
         };
     }
+    % institute top left (only if non-empty)
     \ifx\insertinstitute\@empty
       \hfill
-    \else%
-     \hfill
-      \usebeamerfont{institute}\colorbox{fg}{\mbox{\strut}} \insertinstitute
-    \fi%     
+    \else
+      \hfill
+      \usebeamerfont{institute}
+      \begin{tikzpicture}[baseline]
+          \node[anchor=east,outer sep=0pt,inner xsep=0.6em,align=left] (a) at (0,0) {\insertinstitute};
+          \draw[line width=0.6em] (a.south west) -- (a.north west);
+      \end{tikzpicture}
+    \fi
     \end{beamercolorbox}
 
    \vskip2cm%
