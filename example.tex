@@ -6,14 +6,17 @@ aspectratio=169,
 \title{Presentation Title\\to go here}
 \subtitle{A Long Subtitle}
 \author{Ron Weasley}
-\institute{Computer Science}
+\institute{Computer Science} % set to empty to hide institute
+%\titlegraphic{} % set to empty to hide logo
 
 
 \begin{document}
-
+\section{Title page}
+% TITLE PAGE
+%
 % Background: add an image to the right as follows.
 %   \setbeamertemplate{background}[image right][YOURIMAGE]
-% The default background (colour only) can be recovered by setting
+% The default background (colour only) can be recovered later by setting
 %   \setbeamertemplate{background}[default]
 
 % Titling: this theme redefines the positions of title, author, date and institute.
@@ -25,18 +28,24 @@ aspectratio=169,
 
 
 % TITLE DEMO 1
-% Let's fence the title frame so that theming is local.
-{
+{ % Let's fence the title frame so that theming is local.
 \setbeamertemplate{background}[image right][extra/uol-vg.jpg]
-\setbeamercolor{normal text}{fg=white,bg=Blue}
+\setbeamercolor{normal text}{fg=White,bg=Blue}
 \begin{frame}
-\maketitle
+    \maketitle
 \end{frame}
 }
 
 
 % TITLE DEMO 2
+\setbeamertemplate{background}[image right][extra/uol-vg-bw.png]  % this is document-wide
+\begin{frame}[uolcolours=Pink]  % use uolcolours parameter to make frame follow colour profile
+\maketitle
+\end{frame}
+\setbeamertemplate{background}[default]  % reset the background
 
+
+% TITLE DEMO 3
 {
 \setbeamercolor{normal text}{fg=White,bg=Sky Blue}
 \setbeamercolor{institute}{fg=Black}
@@ -48,15 +57,18 @@ aspectratio=169,
 }
 
 
-% TITLE DEMO 3
-\setbeamertemplate{background}[image right][extra/uol-vg-bw.png]  % this is document-wide
-\begin{frame}[uolcolours=Pink]  % use uolcolours parameter to make frame follow colour profile
+% TITLE DEMO 4
+{
+\setbeamertemplate{title page}[Liverpool][center] % center the title brick
+\begin{frame}[uolcolours=Dark Green] % use white on green colouring
 \maketitle
 \end{frame}
-\setbeamertemplate{background}[default]  % reset the background
+}
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Contents}
+%
 % DEMO CONTENT FOR THE EXAMPLE PRESENTATION 
 \newcommand{\democontent}{
     
