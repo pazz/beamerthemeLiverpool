@@ -26,12 +26,11 @@
           \includegraphics[width=0.22\paperwidth]{uol-logo-uncoloured.pdf}
         };
     }
-    % Department info (short institute) if not emppty top right
-    \ifx\beamer@shortinstitute\@empty
-      \hfill %X\insertinstituteX\insertshortinstitute
+    \ifx\insertinstitute\@empty
+      \hfill
     \else%
      \hfill
-      \usebeamerfont{institute}\colorbox{fg}{\mbox{\strut}} \insertshortinstitute
+      \usebeamerfont{institute}\colorbox{fg}{\mbox{\strut}} \insertinstitute
     \fi%     
     \end{beamercolorbox}
 
