@@ -16,7 +16,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 % TITLE PAGE LAYOUT
-\defbeamertemplate*{title page}{Liverpool}[1][]{%
+\defbeamertemplate*{title page}{Liverpool}[1][left]{%
     \begin{beamercolorbox}{institute}
     % UOL logo top left
     \tikz[baseline] {
@@ -38,11 +38,10 @@
     \end{beamercolorbox}
 
    \vskip2cm%
+    \begin{beamercolorbox}[sep=8pt,#1]{title}
+   %\centering
     { % simulate a beamercolorbox but without the extra space
     \usebeamerfont{title}
-    \usebeamercolor{title}
-    \color{fg}
-    %
     % Display title+subtitle as brickpile if subtitle is defined
     \ifx\insertsubtitle\@empty%
         \uolbrick{\inserttitle}\par%
@@ -50,6 +49,7 @@
         \uolbricks[font=\bf]{\inserttitle}{\insertsubtitle}
     \fi%
     }
+    \end{beamercolorbox}
    \vskip0.75cm%
    \vfill
    \begin{beamercolorbox}{author}
