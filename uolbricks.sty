@@ -39,11 +39,10 @@
 % Draw a single brick
 % arguments as above but only style1 and content1
 \NewDocumentCommand{\uolbrick}{O{} m }{
-    \begin{tikzpicture}[baseline]
+  \begin{tikzpicture}[baseline]
       \node[brick,anchor=south,#1] (top) at (0,0){#2};
       %\node[red] (X) at (0,0) {X}; % debug: X marks the spot
   \end{tikzpicture}
-
 }
 
 \mode<all>
