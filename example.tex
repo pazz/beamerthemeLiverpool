@@ -3,8 +3,6 @@ aspectratio=169,
 ]{beamer}
 \usetheme{Liverpool}
 
-\usepackage{lipsum}
-
 \title{Presentation Title\\to go here}
 \subtitle{A Long Subtitle}
 \author{Ron Weasley}
@@ -46,62 +44,59 @@ aspectratio=169,
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % DEMO CONTENT FOR THE EXAMPLE PRESENTATION 
 \newcommand{\democontent}{
-    Content.
-    \lipsum[1][1-2]
+    
+    This is some text content with and \emph{emphasis}, some \textbf{boldface} stuff and also
+    \alert{alerted text}. The slide also contains footnotes\footnote{don't use me lots} and common beamer contstructs.
 
     \begin{columns}[T]
         \begin{column}{0.5\textwidth}
             \begin{itemize}
-                \item \lipsum[1][2]
-                \item \lipsum[2][2]
+                \item Here is an item
+                \item and another one.
                     \begin{itemize}
-                        \item \lipsum[3][1]
-                        \item \lipsum[4][2]
+                        \item subitems look
+                        \item like this
                     \end{itemize}
-                \item \lipsum[5][2]
+                \item another important point
             \end{itemize}
+            \begin{enumerate}
+                \item Enumerations look like this
+                \item Humpty Dumpty
+                    \begin{enumerate}
+                        \item sat on a wall
+                        \item had a great fall
+                    \end{enumerate}
+            \end{enumerate}
         \end{column}
 
         \begin{column}{0.5\textwidth}
-            \begin{enumerate}
-                \item \lipsum[3][1]
-                \item \lipsum[4][2]
-                \item \lipsum[5][2]
-            \end{enumerate}
+            \begin{block}{A Titled Block}
+                With some text content
+            \end{block}
+            \begin{alertblock}{Alert Block}
+                With some important text.
+            \end{alertblock}
+            \begin{exampleblock}{Example Block}
+                with example content.
+            \end{exampleblock}
+            
+
         \end{column}
     \end{columns}
 }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{frame}[t]
-    \frametitle{Slide Title}
-    \framesubtitle{Second Line}
+    \frametitle{Demo Frame}
+    \framesubtitle{that showcases how content looks}
 
-\democontent 
+    \democontent 
 \end{frame}
-
-\section{Blocks}
-\begin{frame}
-\frametitle{Blocks}
-There is some \alert{alerted} and some \emph{emphasized} text here. This is surprisingly far from the title?
-\begin{block}{Titled Block}
-    \lipsum[1][1-2] 
-\end{block}
-\begin{alertblock}{Alerted Block}
-    \lipsum[1][1-2] 
-\end{alertblock}
-\begin{example}[Muggle]
-%The prime minister
-\end{example}
-
-\end{frame}
-
 
 \section{Blocks}
 
 \begin{frame}
-\frametitle{Blocks}
-\framesubtitle{Maths environments}
+    \frametitle{Maths environments}
 
 \begin{definition}[Muggle]
 A person without Magic
@@ -124,18 +119,17 @@ No Muggle knows about the magical world
 %
 
 \section{Bricks}
-\begin{frame}[t,fragile]
+\begin{frame}[fragile]
     \frametitle{BRICKS}
-    
-    You can insert UOL-style bricks via the \verb|\uolbrick| and \verb|\uolbrick| commands.
-
+    You can insert UOL-style bricks via the \verb|\uolbrick| and \verb|\uolbrick| commands.\\
+    (They are defined in \emph{uolbricks.sty} and can be used outside of this beamer theme.)
 
     \bigskip
     \uolbricks{Here is a pair}{of bricks}
     and here
     \uolbrick[]{is a single brick}
 
-    \bigskip
+    \medskip
     {
     \tiny
     \uolbricks{They shrink}{with the font size} 
@@ -146,13 +140,14 @@ No Muggle knows about the magical world
     }
     \uolbricks[draw=black,fill=Pink,text=White][draw=Blue,fill=Sky Blue,text=Blue]{and can be themed}{individually} 
 
-    \bigskip
+    \medskip
     \uolbricks[][][south west][north west]{You can arrange them}{like this}
     \uolbricks[][][south east][north east]{or like}{this}
     \uolbricks[][][east][west]{or like}{this}
     \uolbricks[][][north east][south]{or like}{this}
     \uolbricks[][][south west][north]{or like}{this}
 
+    \vfill
 \end{frame}
 
 %%%%%%%%%%%%
@@ -235,7 +230,6 @@ No Muggle knows about the magical world
     \frametitle{COLOURS}
     \framesubtitle{Colour profiles}
 
-    \begin{block}{}
     This theme also defines colour profiles that 
     set several elements to sensible colour combinations.
     They are named after the dominant background colour:
@@ -249,17 +243,15 @@ No Muggle knows about the magical world
         \printcolourbox{Dark Green}{White}{Dark Green}
         \printcolourbox{Blue}{White}{Blue}
         \printcolourbox{White}{black}{default}
-    \end{block}
 
-    \begin{block}{How to use them}
- You can switch to some predefined colour profiles mid presentation in two ways:
+        \vfill
+        You can switch to some predefined colour profiles mid presentation in two ways:
  \begin{enumerate}
      \item use \verb|\uolcolours{PRESET}| to cause subsequent frames to use the colours from PRESET;
      \item 
          Give a parameter "uolcolours" directly to a frame environment to affect only that one frame:
          \verb|\begin{frame}[uolcolours=PRESET] ... \end{frame}|
  \end{enumerate}
-    \end{block}
 \end{frame}
 
 
@@ -267,7 +259,10 @@ No Muggle knows about the magical world
 \begin{frame}[uolcolours=Sky Blue]
     \uolbrick[font=\LARGE\bfseries]{HELLO}
     \begin{block}{Here is some text in a block}
-      \lipsum[1][1-5]
+      Ut purus elit, vestibulum ut, placerat ac, adipiscing vitae, felis. Curabitur dictum
+gravida mauris. Nam arcu libero, nonummy eget, consectetuer id, vulputate a, magna.
+Donec vehicula augue eu neque. Pellentesque habitant morbi tristique senectus et
+netus et malesuada fames ac turpis egestas. Mauris ut leo.
     \end{block}
 \end{frame}
 \begin{frame}[uolcolours=Sky Blue]
@@ -279,7 +274,11 @@ No Muggle knows about the magical world
 \begin{frame}[uolcolours=Teal Green]
     \uolbrick[font=\LARGE\bfseries]{HELLO!}
     \begin{block}{Here is some more text in a block}
-        \lipsum[1][1-5]\footnote{This is a slide without tile/subtitle but with a custom UOL brick and a titled block.}
+        Ut purus elit, vestibulum ut, placerat ac, adipiscing vitae, felis. Curabitur dictum
+gravida mauris. Nam arcu libero, nonummy eget, consectetuer id, vulputate a, magna.
+Donec vehicula augue eu neque. Pellentesque habitant morbi tristique senectus et
+netus et malesuada fames ac turpis egestas.
+        Mauris ut leo\footnote{This is a slide without tile/subtitle but with a custom UOL brick and a titled block.}.
     \end{block}
 \end{frame}
 \begin{frame}[uolcolours=Teal Green]
@@ -292,7 +291,10 @@ No Muggle knows about the magical world
 \begin{frame}
     \uolbrick[font=\LARGE\bfseries]{HELLO ORANGE!}
     \begin{block}{Here is some more text in a block}
-        \lipsum[1][2-7]
+        Ut purus elit, vestibulum ut, placerat ac, adipiscing vitae, felis. Curabitur dictum
+gravida mauris. Nam arcu libero, nonummy eget, consectetuer id, vulputate a, magna.
+Donec vehicula augue eu neque. Pellentesque habitant morbi tristique senectus et
+netus et malesuada fames ac turpis egestas. Mauris ut leo.
     \end{block}
 \end{frame}
 
