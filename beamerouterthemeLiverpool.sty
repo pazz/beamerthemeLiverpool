@@ -15,6 +15,39 @@
 % TITLE PAGE
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
+% TITLE PAGE ELEMENT TITLE
+% set Title+Subtitle as brick
+\defbeamertemplate{title}{Liverpool}[1][left]{%
+   \begin{beamercolorbox}[sep=8pt,#1]{title}
+    \usebeamerfont{title}
+    % Display title+subtitle as brickpile if subtitle is defined
+    \ifx\insertsubtitle\@empty%
+        \uolbrick{\inserttitle}\par%
+    \else % Display title as single brick otherwise
+        \uolbricks{
+          \inserttitle
+        }{
+          \usebeamerfont{subtitle}\insertsubtitle
+        }
+    \fi%
+    \end{beamercolorbox}
+}
+
+% TITLE PAGE ELEMENTS AUTHOR and date
+% no extra space and left align as default
+\defbeamertemplate{author}{Liverpool}[1][left]{%
+  \begin{beamercolorbox}[#1]{author}
+    \usebeamerfont{author}\insertauthor
+  \end{beamercolorbox}
+}
+% TITLE PAGE ELEMENTS DATE
+% no extra space and left align as default
+\defbeamertemplate{date}{Liverpool}[1][left]{%
+  \begin{beamercolorbox}[#1]{date}
+    \usebeamerfont{date}\insertdate
+  \end{beamercolorbox}
+}
+
 % TITLE PAGE LAYOUT
 \defbeamertemplate*{title page}{Liverpool}[1][left]{%
     \begin{beamercolorbox}{institute}
@@ -39,29 +72,21 @@
       \end{tikzpicture}
     \fi
     \end{beamercolorbox}
-
-   \vskip2cm%
-    \begin{beamercolorbox}[sep=8pt,#1]{title}
-   %\centering
-    { % simulate a beamercolorbox but without the extra space
-    \usebeamerfont{title}
-    % Display title+subtitle as brickpile if subtitle is defined
-    \ifx\insertsubtitle\@empty%
-        \uolbrick{\inserttitle}\par%
-    \else % Display title as single brick otherwise
-        \uolbricks[font=\bf]{\inserttitle}{\insertsubtitle}
-    \fi%
-    }
-    \end{beamercolorbox}
-   \vskip0.75cm%
-   \vfill
-   \begin{beamercolorbox}{author}
-     \usebeamerfont{author}\insertauthor%
-   \end{beamercolorbox}
-   \begin{beamercolorbox}[]{date}
-     \usebeamerfont{date}\insertdate%
-   \end{beamercolorbox}
+   
+    \vfill
+    \bigskip
+    \usebeamertemplate{title}
+    \vskip0.75cm%
+    \vfill
+    \usebeamertemplate{author}
+    \usebeamertemplate{date}
+}[action]{
+  % use the uolbrick template for title+subtitle
+  \setbeamertemplate{title}[Liverpool][#1]
+  \setbeamertemplate{author}[Liverpool][left]
+  \setbeamertemplate{date}[Liverpool][left]
 }
+
 
 % FRAME TITLE
 \defbeamertemplate*{frametitle}{Liverpool}[1][]
