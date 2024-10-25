@@ -92,12 +92,18 @@
 \defbeamertemplate*{frametitle}{Liverpool}[1][]
 {
 \vskip0.5cm%
+   \usebeamerfont{frametitle}
+   \usebeamercolor[fg]{frametitle}
    \ifx\insertframesubtitle\@empty%
-      \usebeamercolor[fg]{frametitle}
-      \uolbrick[font=\bf]{\insertframetitle}
+      \uolbrick{\insertframetitle}
    \else%
-       \usebeamercolor[fg]{framesubtitle}
-       \uolbricks[font=\bf]{\insertframetitle}{\insertframesubtitle}
+       \uolbricks[font=\usebeamerfont{frametitle}][font=\usebeamerfont{framesubtitle}]{
+          \insertframetitle
+       }{
+          \usebeamercolor[fg]{framesubtitle}
+          \usebeamerfont{framesubtitle}
+          \insertframesubtitle
+       }
    \fi
 \vskip0.3cm%
 }
