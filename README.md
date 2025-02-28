@@ -1,33 +1,35 @@
-UoL LaTeX Beamer template
-------------------------------------
+# LaTeX Beamer theme Liverpool
 
-
-This is a modular beamer template loosely inspired by the official [UoL Powerpoint template](https://www.liverpool.ac.uk/intranet/brand/powerpoint-template/).
+This is a modular beamer loosely inspired by the University of Liverpool's current visual branding.
 
 It looks [like this](../-/jobs/artifacts/master/raw/example.pdf?job=build).
 
 
-# Usage:
-* copy the `.sty` files and the `uol-logo-uncoloured.pdf` into your project directory
-* use `\usetheme{Liverpool}` in your main beamer texfile
-* check out [`example.tex`](example.tex) for customisations.
+## Usage
 
+* Copy the `.sty` files and the `uol-logo-uncoloured.pdf` into your project directory
+* Use `\usetheme{Liverpool}` in your main beamer `tex`-file
+* Check out [`example.tex`](example.tex) for customizations.
 
-# Your Contributions
+## Non-standard convenience features
 
-are welcome! Here are some pointers.
+- The `uoldbricks.sty` file defines a shorthand tikz implementation for making UoL-style "bricks":
+`\uolbrick{content}` (single) and `\uolbricks{first}{second}` (two bricks, can be relatively aligned).
+- The colour theme defines some colours and colour "profiles", that set several beamer colour settings, and can be easily switched using the `uolcolours` argument to beamer frames, or `\uolcolours{PROFILE}` outside of frames. (see inline doc in `example.tex`).
+
+## Your Contributions
+
+... are welcome! Here are some pointers.
 
 ## TODO
 
-- [ ] make a nicer sectionpage
-- [X] finetune structure colours and spacing
-- [X] Institute: allow for multi-line
-- [X] add simple switch to change color scheme (now via `\uolcolours{PROFILE}`
-- [X] make flashy title page optional (see inline doc in `example.tex`)
-- [X] larger/bf items and enumerations
+- [ ] make a nicer section page
+- [ ] finetune structure colours in profiles
+- [ ] spacing in columns
 
 ## Helpful resources
 
-- [UoL Brand Identity](https://www.liverpool.ac.uk/intranet/brand-identity/)
 - <https://latex-beamer.com/tutorials/text-formatting/>
 - <https://www.beamer.plus/Changing-Way-Things-Look.html>
+- [UoL Brand Identity](https://www.liverpool.ac.uk/intranet/brand-identity/)
+- [UoL Powerpoint template](https://www.liverpool.ac.uk/intranet/brand/powerpoint-template/).
