@@ -1,7 +1,7 @@
 \mode<presentation>
 
 \setbeamerfont{block title}{series=\bfseries}
-\setbeamerfont{alerted text}{series=\bfseries}
+\setbeamerfont{alerted text}{series=\ifmmode\else\bfseries\fi}  % \alert's in \bf only outside Math mode
 
 % ITEMIZE
 % use bullet points for itemize environments
