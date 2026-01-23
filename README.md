@@ -24,7 +24,6 @@ It looks [like this](../-/jobs/artifacts/master/raw/example.pdf?job=build).
 ## TODO
 
 - [ ] make a nicer section page
-- [ ] finetune structure colours in profiles
 - [ ] spacing in columns
 
 ## Helpful resources
