@@ -20,14 +20,15 @@
 \defbeamertemplate{title}{Liverpool}[1][left]{%
    \begin{beamercolorbox}[sep=8pt,#1]{title}
     \usebeamerfont{title}
-    % Display title+subtitle as brickpile if subtitle is defined
     \ifx\insertsubtitle\@empty%
+        % Display title as single brick if subtitle is undefined
         \uolbrick{\inserttitle}\par%
-    \else % Display title as single brick otherwise
-        \uolbricks{
+    \else 
+        % Display title+subtitle as brickpile if subtitle is defined
+        \uolbricks[][font=\usebeamerfont{subtitle}]{
           \inserttitle
         }{
-          \usebeamerfont{subtitle}\insertsubtitle
+          \insertsubtitle
         }
     \fi%
     \end{beamercolorbox}
